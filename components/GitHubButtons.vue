@@ -1,6 +1,6 @@
 <template>
   <div>
-    <!-- Bot there yet-->
+    <!-- Not there yet-->
   </div>
 </template>
 
