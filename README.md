@@ -1,5 +1,7 @@
 # 🔥 Nuxt-Fire Demo
 
+<p align="center"><img align="center" height="300px" src="https://nuxt-fire-demo.firebaseapp.com/logo_text.png"/></p>
+
 > Example project using [nuxt-fire](https://github.com/lupas/nuxt-fire) to integrate Firebase into Nuxt.
 
 ## Demo

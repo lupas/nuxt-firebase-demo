@@ -1,21 +1,45 @@
 <template>
-  <div class="VueToNuxtLogo">
-    <div class="Triangle Triangle--two"/>
-    <div class="Triangle Triangle--one"/>
-    <div class="Triangle Triangle--three"/>
-    <div class="Triangle Triangle--four"/>
+  <div class="LogoWrapper">
+
+    <div class="VueToNuxtLogo">
+      <div class="Triangle Triangle--two" />
+      <div class="Triangle Triangle--one" />
+      <div class="Triangle Triangle--three" />
+      <div class="Triangle Triangle--four" />
+    </div>
+    <FirebaseLogo class="FirebaseLogo" />
+
   </div>
 </template>
-
+<script>
+import FirebaseLogo from '~/components/FirebaseLogo'
+export default {
+  components: {
+    FirebaseLogo
+  }
+}
+</script>
 <style>
-.VueToNuxtLogo {
+.LogoWrapper {
   display: inline-block;
-  animation: turn 2s linear forwards 1s;
-  transform: rotateX(180deg);
   position: relative;
   overflow: hidden;
   height: 180px;
   width: 245px;
+}
+
+.VueToNuxtLogo {
+  animation: turn 2s linear forwards 1s;
+  transform: rotateX(180deg);
+  height: 180px;
+  width: 245px;
+}
+
+.FirebaseLogo {
+  position: absolute;
+  top: -50px;
+  right: -80px;
+  animation: goleft 0.5s linear forwards 4s;
 }
 
 .Triangle {
@@ -74,6 +98,13 @@
 @keyframes goright {
   100% {
     left: 70px;
+  }
+}
+
+@keyframes goleft {
+  100% {
+    right: 10px;
+    top: 20px;
   }
 }
 </style>
