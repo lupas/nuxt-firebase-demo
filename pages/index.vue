@@ -81,4 +81,13 @@ hr {
   margin-bottom: 30px;
   margin-top: 30px;
 }
+
+.mt-1 {
+  margin-top: 8px;
+}
+
+body {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
 </style>
