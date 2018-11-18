@@ -2,6 +2,7 @@
   "name": "nuxt-fire-demo",
   "description": "Example project using nuxt-fire to integrate Firebase into a Nuxt project.",
   "author": "Pascal Luther",
+  "license": "MIT",
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
