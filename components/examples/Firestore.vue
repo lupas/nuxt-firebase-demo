@@ -18,7 +18,7 @@ export default {
       const messageRef = this.$fireStore.collection('message').doc('message')
       try {
         await messageRef.set({
-          message: 'Hallo'
+          message: 'Nuxt-Fire with Firestore rocks!'
         })
       } catch (e) {
         alert(e)
