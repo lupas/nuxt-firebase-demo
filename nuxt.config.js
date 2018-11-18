@@ -34,29 +34,27 @@ module.exports = {
   /*
    ** Nuxt.js modules
    */
-  modules: [
-    [
-      'nuxt-fire',
-      {
-        devConfig: {
-          apiKey: 'AIzaSyDa-YwgWTp2GDyVYEfv-XLb62100_HoEvU',
-          authDomain: 'nuxt-fire-demo.firebaseapp.com',
-          databaseURL: 'https://nuxt-fire-demo.firebaseio.com',
-          projectId: 'nuxt-fire-demo',
-          storageBucket: 'nuxt-fire-demo.appspot.com',
-          messagingSenderId: '807370470428'
-        },
-        config: {
-          apiKey: 'AIzaSyDa-YwgWTp2GDyVYEfv-XLb62100_HoEvU',
-          authDomain: 'nuxt-fire-demo.firebaseapp.com',
-          databaseURL: 'https://nuxt-fire-demo.firebaseio.com',
-          projectId: 'nuxt-fire-demo',
-          storageBucket: 'nuxt-fire-demo.appspot.com',
-          messagingSenderId: '807370470428'
-        }
-      }
-    ]
-  ],
+  modules: ['nuxt-fire'],
+
+  //Nuxt-Fire Module Options
+  fire: {
+    devConfig: {
+      apiKey: 'AIzaSyDa-YwgWTp2GDyVYEfv-XLb62100_HoEvU',
+      authDomain: 'nuxt-fire-demo.firebaseapp.com',
+      databaseURL: 'https://nuxt-fire-demo.firebaseio.com',
+      projectId: 'nuxt-fire-demo',
+      storageBucket: 'nuxt-fire-demo.appspot.com',
+      messagingSenderId: '807370470428'
+    },
+    config: {
+      apiKey: 'AIzaSyDa-YwgWTp2GDyVYEfv-XLb62100_HoEvU',
+      authDomain: 'nuxt-fire-demo.firebaseapp.com',
+      databaseURL: 'https://nuxt-fire-demo.firebaseio.com',
+      projectId: 'nuxt-fire-demo',
+      storageBucket: 'nuxt-fire-demo.appspot.com',
+      messagingSenderId: '807370470428'
+    }
+  },
 
   /*
    ** Build configuration
