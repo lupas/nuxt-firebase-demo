@@ -3,3 +3,4 @@ node_modules/**/*
 .nuxt
 dist
 *cache
+.firebase

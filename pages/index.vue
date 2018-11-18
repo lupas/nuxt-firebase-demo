@@ -8,6 +8,9 @@
       <h2 class="subtitle">
         Demo
       </h2>
+      <no-ssr>
+        <GitHubButtons />
+      </no-ssr>
       <Auth />
       <Firestore />
       <Functions />
@@ -19,6 +22,7 @@
 
 <script>
 import Logo from '~/components/Logo.vue'
+import GitHubButtons from '~/components/GitHubButtons.vue'
 import Auth from '~/components/examples/Auth.vue'
 import Firestore from '~/components/examples/Firestore.vue'
 import Functions from '~/components/examples/Functions.vue'
@@ -28,6 +32,7 @@ import Storage from '~/components/examples/Storage.vue'
 export default {
   components: {
     Logo,
+    GitHubButtons,
     Auth,
     Firestore,
     Functions,
@@ -80,5 +85,18 @@ hr {
   border-color: #ffffff;
   margin-bottom: 30px;
   margin-top: 30px;
+}
+
+.mt-1 {
+  margin-top: 8px;
+}
+
+body {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.button--green {
+  cursor: pointer;
 }
 </style>
