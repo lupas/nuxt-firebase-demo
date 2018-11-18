@@ -38,7 +38,6 @@ module.exports = {
     [
       'nuxt-fire',
       {
-        use: ['firestore'],
         config: {
           apiKey: 'AIzaSyDa-YwgWTp2GDyVYEfv-XLb62100_HoEvU',
           authDomain: 'nuxt-fire-demo.firebaseapp.com',
