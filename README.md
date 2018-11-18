@@ -1,4 +1,4 @@
-# 🔥 nuxt-fire-demo
+# 🔥 Nuxt-Fire Demo
 
 > Example project using [nuxt-fire](https://github.com/lupas/nuxt-fire) to integrate Firebase into Nuxt.
 
