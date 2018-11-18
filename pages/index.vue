@@ -90,4 +90,8 @@ body {
   padding-top: 50px;
   padding-bottom: 50px;
 }
+
+.button--green {
+  cursor: pointer;
+}
 </style>
