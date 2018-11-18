@@ -18,7 +18,7 @@ export default {
       const messageRef = this.$fireDb.ref('message')
       try {
         await messageRef.set({
-          message: 'Hallo'
+          message: 'Nuxt-Fire with Firebase Realtime Database rocks!'
         })
       } catch (e) {
         alert(e)
