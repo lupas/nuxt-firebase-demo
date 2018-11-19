@@ -6,7 +6,9 @@
         nuxt-fire
       </h1>
       <Badgens class="fullwidth" />
-      <GitHubButtons class="fullwidth" />
+      <no-ssr>
+        <GitHubButtons class="fullwidth" />
+      </no-ssr>
       <p class="mediumText">by <a href="https://twitter.com/pascalluther" target="_blank">Pascal Luther</a> / <a href="https://github.com/lupas" target="_blank">@lupas</a></p>
       <h2 class="subtitle demoText">
         Demo
