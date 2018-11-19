@@ -99,4 +99,16 @@ body {
 .button--green {
   cursor: pointer;
 }
+
+pre {
+  background-color: #f6f8fa;
+  border-radius: 3px;
+  font-size: 85%;
+  line-height: 1.45;
+  overflow: auto;
+  padding: 16px;
+  text-align: left;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
 </style>

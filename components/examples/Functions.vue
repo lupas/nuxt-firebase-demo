@@ -7,6 +7,16 @@
     <div class="links">
       <a class="button--green" @click="callTestFunction()">Call Test Function</a>
       <p class="mt-1">Might take some seconds.</p>
+      <pre>
+async callTestFunction() {
+  try {
+    const res = await this.$fireFunc.httpsCallable('testFunction')()
+    alert(res.data.message)
+  } catch (e) {
+    alert(e)
+    return
+  }
+}</pre>
     </div>
   </div>
 </template>
