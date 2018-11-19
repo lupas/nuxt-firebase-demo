@@ -5,23 +5,30 @@
       <h1 class="title">
         nuxt-fire
       </h1>
-      <h2 class="subtitle">
+      <Badgens class="fullwidth" />
+      <GitHubButtons class="fullwidth" />
+      <p class="mediumText">by <a href="https://twitter.com/pascalluther" target="_blank">Pascal Luther</a> / <a href="https://github.com/lupas" target="_blank">@lupas</a></p>
+      <h2 class="subtitle demoText">
         Demo
       </h2>
-      <no-ssr>
-        <GitHubButtons />
-      </no-ssr>
       <Auth />
       <Firestore />
       <Functions />
       <RealTimeDatabase />
       <Storage />
+      <p class="mediumText">
+        Credits (for this page):
+      </p>
+      <p class="smallText">
+        <a href="https://www.npmjs.com/package/vue-github-buttons" target="_blank">vue-github-buttons</a>
+      </p>
     </div>
   </section>
 </template>
 
 <script>
 import Logo from '~/components/Logo.vue'
+import Badgens from '~/components/Badgens.vue'
 import GitHubButtons from '~/components/GitHubButtons.vue'
 import Auth from '~/components/examples/Auth.vue'
 import Firestore from '~/components/examples/Firestore.vue'
@@ -37,7 +44,8 @@ export default {
     Firestore,
     Functions,
     RealTimeDatabase,
-    Storage
+    Storage,
+    Badgens
   }
 }
 </script>
@@ -77,6 +85,20 @@ export default {
   padding-bottom: 15px;
 }
 
+.mediumText {
+  font-weight: 200;
+  font-size: 20px;
+  color: #526488;
+  word-spacing: 3px;
+  padding-bottom: 25px;
+}
+
+.smallText {
+  font-weight: 100;
+  font-size: 15px;
+  color: #526488;
+}
+
 .links {
   padding-top: 15px;
 }
@@ -110,5 +132,17 @@ pre {
   text-align: left;
   margin-top: 20px;
   margin-bottom: 20px;
+}
+
+.fullwidth {
+  width: 100%;
+}
+
+.demoText {
+  padding-bottom: 0;
+}
+
+a {
+  text-decoration: none;
 }
 </style>
