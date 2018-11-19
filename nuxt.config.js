@@ -38,6 +38,7 @@ module.exports = {
 
   //Nuxt-Fire Module Options
   fire: {
+    useOnly: ['auth', 'firestore', 'functions', 'storage', 'realtimeDb'],
     devConfig: {
       apiKey: 'AIzaSyDa-YwgWTp2GDyVYEfv-XLb62100_HoEvU',
       authDomain: 'nuxt-fire-demo.firebaseapp.com',

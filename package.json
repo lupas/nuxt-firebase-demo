@@ -3,6 +3,11 @@
   "description": "Example project using nuxt-fire to integrate Firebase into a Nuxt project.",
   "author": "Pascal Luther",
   "license": "MIT",
+  "repository": "https://github.com/lupas/nuxt-fire-demo",
+  "homepage": "https://github.com/lupas",
+  "keywords": [
+    "nuxt, firebase"
+  ],
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
@@ -14,7 +19,7 @@
     "cross-env": "^5.2.0",
     "firebase": "^5.5.8",
     "nuxt": "^2.0.0",
-    "nuxt-fire": "^1.0.1"
+    "nuxt-fire": "^1.1.0"
   },
   "devDependencies": {
     "nodemon": "^1.11.0"
