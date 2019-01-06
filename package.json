@@ -17,12 +17,12 @@
   },
   "dependencies": {
     "cross-env": "^5.2.0",
-    "firebase": "^5.5.9",
+    "firebase": "^5.7.2",
     "nuxt": "^2.3.4",
-    "nuxt-fire": "^1.2.1",
+    "nuxt-fire": "^1.2.7",
     "vue-github-buttons": "^2.1.1"
   },
   "devDependencies": {
-    "nodemon": "^1.18.7"
+    "nodemon": "^1.18.9"
   }
 }
