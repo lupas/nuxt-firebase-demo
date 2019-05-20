@@ -36,6 +36,13 @@ module.exports = {
    */
   modules: ['nuxt-fire'],
 
+  /*
+   ** Nuxt.js Middleware
+   */
+  router: {
+    middleware: ['testMiddleware']
+  },
+
   //Nuxt-Fire Module Options
   fire: {
     useOnly: ['auth', 'firestore', 'functions', 'storage', 'realtimeDb'],
