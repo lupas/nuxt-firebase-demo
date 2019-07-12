@@ -45,7 +45,14 @@ module.exports = {
 
   //Nuxt-Fire Module Options
   fire: {
-    useOnly: ['auth', 'firestore', 'functions', 'storage', 'realtimeDb'],
+    useOnly: [
+      'auth',
+      'firestore',
+      'functions',
+      'storage',
+      'realtimeDb'
+      //'performance'
+    ],
     functionsLocation: 'us-central1',
     config: {
       development: {
@@ -54,7 +61,8 @@ module.exports = {
         databaseURL: 'https://nuxt-fire-demo.firebaseio.com',
         projectId: 'nuxt-fire-demo',
         storageBucket: 'nuxt-fire-demo.appspot.com',
-        messagingSenderId: '807370470428'
+        messagingSenderId: '807370470428',
+        appId: 'nuxt-fire-demo'
       },
       production: {
         apiKey: 'AIzaSyDa-YwgWTp2GDyVYEfv-XLb62100_HoEvU',
@@ -62,7 +70,8 @@ module.exports = {
         databaseURL: 'https://nuxt-fire-demo.firebaseio.com',
         projectId: 'nuxt-fire-demo',
         storageBucket: 'nuxt-fire-demo.appspot.com',
-        messagingSenderId: '807370470428'
+        messagingSenderId: '807370470428',
+        appId: 'nuxt-fire-demo'
       }
     }
   },
