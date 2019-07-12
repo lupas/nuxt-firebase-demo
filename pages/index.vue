@@ -9,7 +9,13 @@
       <no-ssr>
         <GitHubButtons class="fullwidth" />
       </no-ssr>
-      <p class="mediumText">by <a href="https://twitter.com/pascalluther" target="_blank">Pascal Luther</a> / <a href="https://github.com/lupas" target="_blank">@lupas</a></p>
+      <p class="mediumText">by <a
+          href="https://twitter.com/pascalluther"
+          target="_blank"
+        >Pascal Luther</a> / <a
+          href="https://github.com/lupas"
+          target="_blank"
+        >@lupas</a></p>
       <h2 class="subtitle demoText">
         Demo
       </h2>
@@ -18,25 +24,32 @@
       <Functions />
       <RealTimeDatabase />
       <Storage />
-      <p class="mediumText">
-        Credits (for this page):
-      </p>
-      <p class="smallText">
-        <a href="https://www.npmjs.com/package/vue-github-buttons" target="_blank">vue-github-buttons</a>
-      </p>
+      <Performance />
+      <div class="mt-5">
+        <p class="mediumText">
+          Credits (for this page):
+        </p>
+        <p class="smallText">
+          <a
+            href="https://www.npmjs.com/package/vue-github-buttons"
+            target="_blank"
+          >vue-github-buttons</a>
+        </p>
+      </div>
     </div>
   </section>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
-import Badgens from '~/components/Badgens.vue'
-import GitHubButtons from '~/components/GitHubButtons.vue'
-import Auth from '~/components/examples/Auth.vue'
-import Firestore from '~/components/examples/Firestore.vue'
-import Functions from '~/components/examples/Functions.vue'
-import RealTimeDatabase from '~/components/examples/RealTimeDatabase.vue'
-import Storage from '~/components/examples/Storage.vue'
+import Logo from "~/components/Logo.vue";
+import Badgens from "~/components/Badgens.vue";
+import GitHubButtons from "~/components/GitHubButtons.vue";
+import Auth from "~/components/examples/Auth.vue";
+import Firestore from "~/components/examples/Firestore.vue";
+import Functions from "~/components/examples/Functions.vue";
+import RealTimeDatabase from "~/components/examples/RealTimeDatabase.vue";
+import Storage from "~/components/examples/Storage.vue";
+import Performance from "~/components/examples/Performance.vue";
 
 export default {
   components: {
@@ -47,9 +60,10 @@ export default {
     Functions,
     RealTimeDatabase,
     Storage,
-    Badgens
+    Badgens,
+    Performance
   }
-}
+};
 </script>
 
 <style>
@@ -62,8 +76,8 @@ export default {
 }
 
 .title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   display: block;
   font-weight: 300;
   font-size: 100px;
@@ -113,6 +127,10 @@ hr {
 
 .mt-1 {
   margin-top: 8px;
+}
+
+.mt-5 {
+  margin-top: 25px;
 }
 
 body {
