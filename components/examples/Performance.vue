@@ -8,7 +8,7 @@
       <p
         class="button--green"
         @click="checkPerformance()"
-      >Not Yet Implemented</a>
+      >Not Yet Implemented</p>
     </div>
   </div>
 </template>

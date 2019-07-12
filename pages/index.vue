@@ -25,15 +25,17 @@
       <RealTimeDatabase />
       <Storage />
       <Performance />
-      <p class="mediumText mt-5">
-        Credits (for this page):
-      </p>
-      <p class="smallText">
-        <a
-          href="https://www.npmjs.com/package/vue-github-buttons"
-          target="_blank"
-        >vue-github-buttons</a>
-      </p>
+      <div class="mt-5">
+        <p class="mediumText">
+          Credits (for this page):
+        </p>
+        <p class="smallText">
+          <a
+            href="https://www.npmjs.com/package/vue-github-buttons"
+            target="_blank"
+          >vue-github-buttons</a>
+        </p>
+      </div>
     </div>
   </section>
 </template>
@@ -125,6 +127,10 @@ hr {
 
 .mt-1 {
   margin-top: 8px;
+}
+
+.mt-5 {
+  margin-top: 25px;
 }
 
 body {
