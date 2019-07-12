@@ -16,7 +16,7 @@
     "deploy": "firebase deploy --only hosting --project nuxt-fire-demo"
   },
   "dependencies": {
-    "core-js": "3.1.4",
+    "core-js": "^2.6.9",
     "cross-env": "^5.2.0",
     "firebase": "^6.3.0",
     "node-fetch": "^2.6.0",
