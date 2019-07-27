@@ -50,8 +50,8 @@ module.exports = {
       'firestore',
       'functions',
       'storage',
-      'realtimeDb'
-      //'performance'
+      'realtimeDb',
+      'performance'
     ],
     functionsLocation: 'us-central1',
     config: {
@@ -62,7 +62,7 @@ module.exports = {
         projectId: 'nuxt-fire-demo',
         storageBucket: 'nuxt-fire-demo.appspot.com',
         messagingSenderId: '807370470428',
-        appId: 'nuxt-fire-demo'
+        appId: '1:807370470428:web:26da98c86c3fd352'
       },
       production: {
         apiKey: 'AIzaSyDa-YwgWTp2GDyVYEfv-XLb62100_HoEvU',
@@ -71,7 +71,7 @@ module.exports = {
         projectId: 'nuxt-fire-demo',
         storageBucket: 'nuxt-fire-demo.appspot.com',
         messagingSenderId: '807370470428',
-        appId: 'nuxt-fire-demo'
+        appId: '1:807370470428:web:26da98c86c3fd352'
       }
     }
   },
