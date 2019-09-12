@@ -25,6 +25,7 @@
       <RealTimeDatabase />
       <Storage />
       <Performance />
+      <VuexStore />
       <div class="mt-5">
         <p class="mediumText">
           Credits (for this page):
@@ -50,6 +51,7 @@ import Functions from "~/components/examples/Functions.vue";
 import RealTimeDatabase from "~/components/examples/RealTimeDatabase.vue";
 import Storage from "~/components/examples/Storage.vue";
 import Performance from "~/components/examples/Performance.vue";
+import VuexStore from "~/components/examples/VuexStore.vue";
 
 export default {
   components: {
@@ -61,7 +63,8 @@ export default {
     RealTimeDatabase,
     Storage,
     Badgens,
-    Performance
+    Performance,
+    VuexStore
   }
 };
 </script>
