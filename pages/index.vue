@@ -6,9 +6,9 @@
         nuxt-fire
       </h1>
       <Badgens class="fullwidth" />
-      <no-ssr>
+      <client-only>
         <GitHubButtons class="fullwidth" />
-      </no-ssr>
+      </client-only>
       <p class="mediumText">by <a
           href="https://twitter.com/pascalluther"
           target="_blank"
