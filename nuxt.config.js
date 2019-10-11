@@ -51,7 +51,8 @@ module.exports = {
       'functions',
       'storage',
       'realtimeDb',
-      'performance'
+      'performance',
+      'analytics'
     ],
     functionsLocation: 'us-central1',
     config: {
@@ -62,7 +63,8 @@ module.exports = {
         projectId: 'nuxt-fire-demo',
         storageBucket: 'nuxt-fire-demo.appspot.com',
         messagingSenderId: '807370470428',
-        appId: '1:807370470428:web:26da98c86c3fd352'
+        appId: '1:807370470428:web:26da98c86c3fd352',
+        measurementId: 'G-XT6PVC1D4X'
       },
       production: {
         apiKey: 'AIzaSyDa-YwgWTp2GDyVYEfv-XLb62100_HoEvU',
@@ -71,7 +73,8 @@ module.exports = {
         projectId: 'nuxt-fire-demo',
         storageBucket: 'nuxt-fire-demo.appspot.com',
         messagingSenderId: '807370470428',
-        appId: '1:807370470428:web:26da98c86c3fd352'
+        appId: '1:807370470428:web:26da98c86c3fd352',
+        measurementId: 'G-XT6PVC1D4X'
       }
     }
   },

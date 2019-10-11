@@ -25,6 +25,7 @@
       <RealTimeDatabase />
       <Storage />
       <Performance />
+      <Analytics />
       <VuexStore />
       <div class="mt-5">
         <p class="mediumText">
@@ -52,6 +53,7 @@ import RealTimeDatabase from "~/components/examples/RealTimeDatabase.vue";
 import Storage from "~/components/examples/Storage.vue";
 import Performance from "~/components/examples/Performance.vue";
 import VuexStore from "~/components/examples/VuexStore.vue";
+import Analytics from "~/components/examples/Analytics.vue";
 
 export default {
   components: {
@@ -64,7 +66,8 @@ export default {
     Storage,
     Badgens,
     Performance,
-    VuexStore
+    VuexStore,
+    Analytics
   }
 };
 </script>
