@@ -16,15 +16,15 @@
     "deploy": "firebase deploy --only hosting --project nuxt-fire-demo"
   },
   "dependencies": {
-    "core-js": "^2.6.9",
+    "core-js": "^2.6.10",
     "cross-env": "^6.0.3",
-    "firebase": "^7.2.0",
+    "firebase": "^7.2.1",
     "node-fetch": "^2.6.0",
     "nuxt": "^2.10.1",
-    "nuxt-fire": "^2.1.0",
+    "nuxt-fire": "^2.2.0",
     "vue-github-buttons": "^3.1.0"
   },
   "devDependencies": {
-    "nodemon": "^1.19.3"
+    "nodemon": "^1.19.4"
   }
 }
