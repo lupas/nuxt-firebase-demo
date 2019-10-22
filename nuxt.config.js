@@ -52,7 +52,8 @@ module.exports = {
       'storage',
       'realtimeDb',
       'performance',
-      'analytics'
+      'analytics',
+      'remoteConfig'
     ],
     functionsLocation: 'us-central1',
     config: {
