@@ -26,6 +26,7 @@
       <Storage />
       <Performance />
       <Analytics />
+      <RemoteConfig />
       <VuexStore />
       <div class="mt-5">
         <p class="mediumText">
@@ -54,6 +55,7 @@ import Storage from "~/components/examples/Storage.vue";
 import Performance from "~/components/examples/Performance.vue";
 import VuexStore from "~/components/examples/VuexStore.vue";
 import Analytics from "~/components/examples/Analytics.vue";
+import RemoteConfig from "~/components/examples/RemoteConfig.vue";
 
 export default {
   components: {
@@ -67,7 +69,8 @@ export default {
     Badgens,
     Performance,
     VuexStore,
-    Analytics
+    Analytics,
+    RemoteConfig
   }
 };
 </script>
