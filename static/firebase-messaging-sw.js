@@ -1,21 +1,24 @@
-/* eslint-env serviceworker */
-/* eslint-disable no-undef */
+const options = {"firebaseVersion":"7.3.0","messagingSenderId":"807370470428","onFirebaseHosting":false}
+const version = options.firebaseVersion
+const messagingSenderId = options.messagingSenderId
+const onFirebaseHosting = options.onFirebaseHosting
 
-// Get ENV && set messagingSenderId
-if (this.location.hostname === 'localhost') {
-  importScripts('https://www.gstatic.com/firebasejs/7.3.0/firebase-app.js')
+if (onFirebaseHosting) {
+  // Only works on Firebase hosting!
+  importScripts('/__/firebase/' + version + '/firebase-app.js')
+  importScripts('/__/firebase/' + version + '/firebase-messaging.js')
+  importScripts('/__/firebase/init.js')
+}
+else {
   importScripts(
-    'https://www.gstatic.com/firebasejs/7.3.0/firebase-messaging.js'
+    'https://www.gstatic.com/firebasejs/' + version + '/firebase-app.js'
+  )
+  importScripts(
+    'https://www.gstatic.com/firebasejs/' + version + '/firebase-messaging.js'
   )
   firebase.initializeApp({
-    messagingSenderId: '807370470428'
+    messagingSenderId: messagingSenderId
   })
-} else {
-  // Only works on Firebase hosting!
-  // other option, add PRD messagingSenderId = '337088779183' and do the same
-  importScripts('/__/firebase/7.3.0/firebase-app.js')
-  importScripts('/__/firebase/7.3.0/firebase-messaging.js')
-  importScripts('/__/firebase/init.js')
 }
 
 // Retrieve an instance of Firebase Messaging so that it can handle background
@@ -44,10 +47,10 @@ messaging.setBackgroundMessageHandler(function(payload) {
 })
 
 self.addEventListener('notificationclick', function(e) {
-  var notification = e.notification
+  const notification = e.notification
   // MARK 1 -> always takes first item
-  var clickAction = notification.actions[0].action
-  var action = e.action
+  const clickAction = notification.actions[0].action
+  const action = e.action
   if (action === 'close') {
     notification.close()
   } else {
