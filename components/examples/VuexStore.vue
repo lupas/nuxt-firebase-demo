@@ -1,17 +1,17 @@
 <template>
   <div>
-    <hr>
-    <h3 class="sectionTitle">
+    <h3 class="display-1 mb-5">
       Vuex Store
     </h3>
     <p>
       Tests if fireXXX objects can be accessed in a vuex store action.
     </p>
     <div class="links">
-      <p
-        class="button--green"
+      <v-btn
+        color="primary"
+        outlined
         @click="checkVuexStore()"
-      >Test Vuex Store</p>
+      >Test Vuex Store</v-btn>
     </div>
   </div>
 </template>

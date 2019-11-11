@@ -1,14 +1,14 @@
 <template>
   <div>
-    <hr>
-    <h3 class="sectionTitle">
+    <h3 class="display-1 mb-5">
       Firebase RemoteConfig
     </h3>
     <div class="links">
-      <a
-        class="button--green"
+      <v-btn
+        color="primary"
+        outlined
         @click="readRemoteConfig()"
-      >Reads Remote Config</a>
+      >Reads Remote Config</v-btn>
       <pre>
 async readRemoteConfig() {
   try {

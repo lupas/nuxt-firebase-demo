@@ -1,11 +1,14 @@
 <template>
   <div>
-    <hr>
-    <h3 class="sectionTitle">
+    <h3 class="display-1 mb-5">
       Firebase Realtime Database
     </h3>
     <div class="links">
-      <a class="button--green" @click="writeToRealtimeDb()">Write to Realtime DB</a>
+      <v-btn
+        color="primary"
+        outlined
+        @click="writeToRealtimeDb()"
+      >Write to Realtime DB</v-btn>
       <pre>
 async writeToRealtimeDb() {
   const messageRef = this.$fireDb.ref('message')
@@ -19,7 +22,11 @@ async writeToRealtimeDb() {
   }
   alert('Success.')
 }</pre>
-      <a class="button--green" @click="readFromRealtimeDb()">Read from Realtime DB</a>
+      <v-btn
+        color="primary"
+        outlined
+        @click="readFromRealtimeDb()"
+      >Read from Realtime DB</v-btn>
       <pre>
 async readFromRealtimeDb() {
   const messageRef = this.$fireDb.ref('message')
@@ -39,27 +46,27 @@ async readFromRealtimeDb() {
 export default {
   methods: {
     async writeToRealtimeDb() {
-      const messageRef = this.$fireDb.ref('message')
+      const messageRef = this.$fireDb.ref("message");
       try {
         await messageRef.set({
-          message: 'Nuxt-Fire with Firebase Realtime Database rocks!'
-        })
+          message: "Nuxt-Fire with Firebase Realtime Database rocks!"
+        });
       } catch (e) {
-        alert(e)
-        return
+        alert(e);
+        return;
       }
-      alert('Success.')
+      alert("Success.");
     },
     async readFromRealtimeDb() {
-      const messageRef = this.$fireDb.ref('message')
+      const messageRef = this.$fireDb.ref("message");
       try {
-        const snapshot = await messageRef.once('value')
-        alert(snapshot.val().message)
+        const snapshot = await messageRef.once("value");
+        alert(snapshot.val().message);
       } catch (e) {
-        alert(e)
-        return
+        alert(e);
+        return;
       }
     }
   }
-}
+};
 </script>

@@ -1,14 +1,14 @@
 <template>
   <div>
-    <hr>
-    <h3 class="sectionTitle">
+    <h3 class="display-1 mb-5">
       Firebase Messaging
     </h3>
     <div class="links">
-      <p
-        class="button--green"
+      <v-btn
+        color="primary"
+        outlined
         @click="requestPermission()"
-      >Request Permission</p>
+      >Request Permission</v-btn>
     </div>
   </div>
 </template>

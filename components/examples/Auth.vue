@@ -1,11 +1,14 @@
 <template>
   <div>
-    <hr>
-    <h3 class="sectionTitle">
+    <h3 class="display-1 mb-5">
       Firebase Authentication
     </h3>
     <div class="links">
-      <a class="button--green" @click="createUser()">Create User</a>
+      <v-btn
+        color="primary"
+        outlined
+        @click="createUser()"
+      >Create User</v-btn>
       <pre>
 async createUser() {
   try {
@@ -28,13 +31,13 @@ export default {
     async createUser() {
       try {
         await this.$fireAuth.createUserWithEmailAndPassword(
-          'foo@foo.foo',
-          'test'
-        )
+          "foo@foo.foo",
+          "test"
+        );
       } catch (e) {
-        alert(e)
+        alert(e);
       }
     }
   }
-}
+};
 </script>

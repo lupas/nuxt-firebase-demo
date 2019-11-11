@@ -36,6 +36,25 @@ module.exports = {
    */
   modules: ['nuxt-fire'],
 
+  buildModules: ['@nuxtjs/vuetify'],
+
+  vuetify: {
+    // treeShake: false,
+    // customVariables: ['~/assets/style/variables.scss'],
+    defaultAssets: {
+      icons: false
+    },
+    theme: {
+      dark: false,
+      themes: {
+        light: {
+          primary: '#3b8070',
+          secondary: '#35495e'
+        }
+      }
+    }
+  },
+
   /*
    ** Nuxt.js Middleware
    */

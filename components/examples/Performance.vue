@@ -1,14 +1,14 @@
 <template>
   <div>
-    <hr>
-    <h3 class="sectionTitle">
+    <h3 class="display-1 mb-5">
       Firebase Performance
     </h3>
     <div class="links">
-      <p
-        class="button--green"
+      <v-btn
+        color="primary"
+        outlined
         @click="checkPerformance()"
-      >{{ traceStarted ? "In Progress" : "Start Trace"}}</p>
+      >{{ traceStarted ? "In Progress" : "Start Trace"}}</v-btn>
     </div>
   </div>
 </template>

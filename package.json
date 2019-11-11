@@ -16,6 +16,7 @@
     "deploy": "firebase deploy --only hosting --project nuxt-fire-demo"
   },
   "dependencies": {
+    "@nuxtjs/vuetify": "^1.9.0",
     "core-js": "^2.6.10",
     "cross-env": "^6.0.3",
     "firebase": "^7.2.1",
