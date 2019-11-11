@@ -53,7 +53,8 @@ module.exports = {
       'realtimeDb',
       'performance',
       'analytics',
-      'remoteConfig'
+      'remoteConfig',
+      'messaging'
     ],
     functionsLocation: 'us-central1',
     config: {

@@ -27,6 +27,7 @@
       <Performance />
       <Analytics />
       <RemoteConfig />
+      <Messaging />
       <VuexStore />
       <div class="mt-5">
         <p class="mediumText">
@@ -56,6 +57,7 @@ import Performance from "~/components/examples/Performance.vue";
 import VuexStore from "~/components/examples/VuexStore.vue";
 import Analytics from "~/components/examples/Analytics.vue";
 import RemoteConfig from "~/components/examples/RemoteConfig.vue";
+import Messaging from "~/components/examples/Messaging.vue";
 
 export default {
   components: {
@@ -70,7 +72,8 @@ export default {
     Performance,
     VuexStore,
     Analytics,
-    RemoteConfig
+    RemoteConfig,
+    Messaging
   }
 };
 </script>
