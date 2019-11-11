@@ -97,7 +97,8 @@ module.exports = {
         appId: '1:807370470428:web:26da98c86c3fd352',
         measurementId: 'G-XT6PVC1D4X'
       }
-    }
+    },
+    initMessaging: true
   },
 
   /*
