@@ -3,32 +3,32 @@
     <h3 class="display-1 mb-5">
       Firebase Messaging
     </h3>
-    <v-col
-      cols="12"
-      class="links"
-    >
+    <v-col cols="12" class="links">
       <v-btn
-        :disabled="listenerStarted"
+        :disabled="listenersStarted"
         color="primary"
         outlined
-        @click="startOnMessageListener"
-      >Start Listener</v-btn>
+        @click="startListeners"
+        >Start Listeners</v-btn
+      >
       <v-btn
-        :disabled="permissionGranted || !listenerStarted"
+        :disabled="permissionGranted || !listenersStarted"
         color="primary"
         outlined
         @click="requestPermission"
-      >Request Permission</v-btn>
+        >Request Permission</v-btn
+      >
       <v-btn
-        :disabled="!listenerStarted || !permissionGranted || idToken !== null"
+        :disabled="!listenersStarted || !permissionGranted || idToken !== null"
         color="primary"
         outlined
         @click="getIdToken"
-      >Get ID Token</v-btn>
+        >Get ID Token</v-btn
+      >
     </v-col>
     <v-col cols="12">
       <p>ID Token:</p>
-      {{idToken}}
+      {{ idToken }}
     </v-col>
   </v-row>
 </template>
@@ -36,17 +36,13 @@
 <script>
 export default {
   data: () => ({
-    listenerStarted: false,
+    listenersStarted: false,
     permissionGranted: false,
     idToken: null
   }),
   methods: {
     async requestPermission() {
-      this.startOnMessageListener();
       try {
-        this.$fireMess.usePublicVapidKey(
-          "BL_xoiuOe5vbb2vJkCNnuswn03NwCsyCkJUgRbuQA5tpg7J4E4z50MO8b-wrrad6fcysYAaFjHqU7D9o0oCWL8w"
-        );
         const permission = await Notification.requestPermission();
         this.permissionGranted = permission === "granted";
       } catch (e) {
@@ -65,6 +61,7 @@ export default {
 
       if (currentToken) {
         this.idToken = currentToken;
+        console.log(this.idToken);
       } else {
         // Show permission request.
         console.info(
@@ -75,11 +72,25 @@ export default {
         this.idToken = null;
       }
     },
+    startListeners() {
+      this.startOnMessageListener();
+      this.startTokenRefreshListener();
+      this.listenersStarted = true;
+    },
     startOnMessageListener() {
       this.$fireMess.onMessage(payload => {
         console.log("Message received. ", payload);
       });
-      this.listenerStarted = true;
+    },
+    startTokenRefreshListener() {
+      this.$fireMess.onTokenRefresh(async () => {
+        try {
+          const refreshedToken = await this.$fireMess.getToken();
+          this.idToken = refreshedToken;
+        } catch (e) {
+          console.error("Unable to retrieve refreshed token ", err);
+        }
+      });
     }
   }
 };

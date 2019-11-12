@@ -87,7 +87,7 @@ module.exports = {
         appId: "1:807370470428:web:26da98c86c3fd352",
         measurementId: "G-XT6PVC1D4X",
         fcmPublicVapidKey:
-          "eHctWqe8oCVp7QB08R1FKD:APA91bGXev9JvuZipEzlIw8gISwbwvrg4KfhzwCm2GufwOieG8MyaSAXDNYTjnubDcFc9_Y8w4JIxKne--I1Xqn6yiPwFuLPyyWA0sqiYGEDkrmpoegk4wPXnPJ7HiwVrMX-YhL3GixV"
+          "BL_xoiuOe5vbb2vJkCNnuswn03NwCsyCkJUgRbuQA5tpg7J4E4z50MO8b-wrrad6fcysYAaFjHqU7D9o0oCWL8w"
       },
       production: {
         apiKey: "AIzaSyDa-YwgWTp2GDyVYEfv-XLb62100_HoEvU",
@@ -99,7 +99,7 @@ module.exports = {
         appId: "1:807370470428:web:26da98c86c3fd352",
         measurementId: "G-XT6PVC1D4X",
         fcmPublicVapidKey:
-          "eHctWqe8oCVp7QB08R1FKD:APA91bGXev9JvuZipEzlIw8gISwbwvrg4KfhzwCm2GufwOieG8MyaSAXDNYTjnubDcFc9_Y8w4JIxKne--I1Xqn6yiPwFuLPyyWA0sqiYGEDkrmpoegk4wPXnPJ7HiwVrMX-YhL3GixV"
+          "BL_xoiuOe5vbb2vJkCNnuswn03NwCsyCkJUgRbuQA5tpg7J4E4z50MO8b-wrrad6fcysYAaFjHqU7D9o0oCWL8w"
       }
     },
     initMessaging: true
