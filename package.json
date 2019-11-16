@@ -13,7 +13,7 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "deploy": "firebase deploy --only hosting --project nuxt-fire-demo"
+    "deploy": "npm run generate && firebase deploy --only hosting --project nuxt-fire-demo"
   },
   "dependencies": {
     "@nuxtjs/vuetify": "^1.9.0",
@@ -22,7 +22,7 @@
     "firebase": "^7.3.0",
     "node-fetch": "^2.6.0",
     "nuxt": "^2.10.2",
-    "nuxt-fire": "^2.4.4",
+    "nuxt-fire": "^2.5.1",
     "vue-github-buttons": "^3.1.0"
   },
   "devDependencies": {
