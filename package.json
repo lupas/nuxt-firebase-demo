@@ -13,7 +13,8 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "deploy": "npm run generate && firebase deploy --only hosting --project nuxt-fire-demo"
+    "deploy": "npm run generate && firebase deploy --only hosting --project nuxt-fire-demo",
+    "i:nuxt-fire": "npm uninstall nuxt-fire && npm i ../../_NPM-MODULES_GITHUB/nuxt-fire/packages/nuxt-fire/src"
   },
   "dependencies": {
     "@nuxtjs/vuetify": "^1.9.0",
