@@ -37,21 +37,6 @@
         <component :is="component"></component>
       </v-col>
 
-      <v-col
-        align="center"
-        cols="12"
-      >
-        <p class="title">
-          Credits:
-        </p>
-        <p class="subtitle-1">
-          <a
-            href="https://www.npmjs.com/package/vue-github-buttons"
-            target="_blank"
-          >vue-github-buttons</a>
-        </p>
-      </v-col>
-      </v-col>
     </v-row>
   </v-container>
 </template>
