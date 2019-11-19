@@ -76,20 +76,54 @@ module.exports = {
       fcmPublicVapidKey:
         "BL_xoiuOe5vbb2vJkCNnuswn03NwCsyCkJUgRbuQA5tpg7J4E4z50MO8b-wrrad6fcysYAaFjHqU7D9o0oCWL8w"
     },
-    useOnly: [
-      "auth",
-      "firestore",
-      "functions",
-      "storage",
-      "realtimeDb",
-      "performance",
-      "analytics",
-      "remoteConfig",
-      "messaging"
-    ],
-    functionsLocation: "us-central1",
-    initMessaging: true
+    services: {
+      auth: true,
+      firestore: true,
+      functions: true,
+      storage: true,
+      realtimeDb: true,
+      performance: true,
+      analytics: true,
+      remoteConfig: {
+        settings: {
+          fetchTimeoutMillis: 60000,
+          minimumFetchIntervalMillis: 43200000
+        },
+        defaultConfig: {
+          welcome_message: "Welcome"
+        }
+      },
+      messaging: {
+        createServiceWorker: true,
+        onFirebaseHosting: true
+      }
+    }
   },
+
+  // //Nuxt-Fire Module Options
+  // fire: {
+  //   auth: {
+  //     initialize: {
+  //       onSuccessMutation: "SET_AUTH_USER",
+  //       onSuccessAction: null,
+  //       onErrorMutation: null,
+  //       onErrorAction: "handleAuthError"
+  //     }
+  //   },
+  //   remoteConfig: {
+  //     settings: {
+  //       fetchTimeoutMillis: 60000,
+  //       minimumFetchIntervalMillis: 43200000
+  //     },
+  //     defaultConfig: {
+  //       welcome_message: "Welcome"
+  //     }
+  //   },
+  //   messaging: {
+  //     createServiceWorker: true,
+  //     onFirebaseHosting: false
+  //   }
+  // },
 
   /*
    ** Build configuration

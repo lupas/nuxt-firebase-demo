@@ -14,7 +14,7 @@
     "start": "nuxt start",
     "generate": "nuxt generate",
     "deploy": "npm run generate && firebase deploy --only hosting --project nuxt-fire-demo",
-    "i:nuxt-fire": "npm uninstall nuxt-fire && npm i ../../_NPM-MODULES_GITHUB/nuxt-fire/packages/nuxt-fire/src"
+    "i:nuxt-fire": "npm uninstall nuxt-fire && npm i ../../_NPM-MODULES_GITHUB/nuxt-fire/packages/nuxt-fire"
   },
   "dependencies": {
     "@nuxtjs/vuetify": "^1.9.0",
@@ -23,7 +23,7 @@
     "firebase": "^7.3.0",
     "node-fetch": "^2.6.0",
     "nuxt": "^2.10.2",
-    "nuxt-fire": "^2.5.1",
+    "nuxt-fire": "^3.0.0",
     "vue-github-buttons": "^3.1.0"
   },
   "devDependencies": {

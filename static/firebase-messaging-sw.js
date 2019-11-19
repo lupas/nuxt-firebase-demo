@@ -1,4 +1,4 @@
-const options = {"firebaseVersion":"7.3.0","messagingSenderId":"807370470428","onFirebaseHosting":false}
+const options = {"firebaseVersion":"7.4.0","messagingSenderId":"807370470428","onFirebaseHosting":true}
 const version = options.firebaseVersion
 const messagingSenderId = options.messagingSenderId
 const onFirebaseHosting = options.onFirebaseHosting
