@@ -14,7 +14,7 @@
 async callTestFunction() {
   try {
     const res = await this.$fireFunc.httpsCallable('testFunction')()
-    alert(res.data.message)
+    alert(res.data)
   } catch (e) {
     alert(e)
     return

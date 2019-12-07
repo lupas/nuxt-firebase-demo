@@ -79,7 +79,9 @@ module.exports = {
     services: {
       auth: true,
       firestore: true,
-      functions: true,
+      functions: {
+        // emulatorPort: 12345
+      },
       storage: true,
       realtimeDb: true,
       performance: true,
