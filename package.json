@@ -13,6 +13,7 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
+    "heroku-postbuild": "npm run build",
     "deploy": "npm run generate && firebase deploy --only hosting --project nuxt-fire-demo"
   },
   "dependencies": {
