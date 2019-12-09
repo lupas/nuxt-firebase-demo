@@ -1,6 +1,3 @@
-import { getAuthUserFromCookie } from 'nuxt-fire/src/helpers'
-import Cookie from 'js-cookie'
-
 export default {
   nuxtServerInit({ commit }, ctx) {
     if (this.$fireAuth === null) {
@@ -19,14 +16,30 @@ export default {
       'Success. Nuxt-fire Objects can be accessed in nuxtServerInit action via this.$fire___, ctx.$fire___ and ctx.app.$fire___'
     )
 
-    const authUser = getAuthUserFromCookie({ commit, req: ctx.req })
-    if (authUser) {
+    /** Get the VERIFIED authUser from the server */
+
+    const ssrVerifiedAuthUser = ctx.res.verifiedFireAuthUser
+
+    if (ssrVerifiedAuthUser) {
+      console.info(
+        'Auth User verified on server-side. User: ',
+        ssrVerifiedAuthUser
+      )
       commit('SET_AUTH_USER', {
-        authUser
+        authUser: ssrVerifiedAuthUser
       })
     }
   },
-  checkVuexStore({ commit, state, rootState }) {
+
+  handleSuccessfulAuthentication({ commit }, { authUser }) {
+    // Install servicerWorker if supported on sign-in/sign-up page.
+    if (process.browser && 'serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/firebase-auth-sw.js', { scope: '/' })
+    }
+    commit('SET_AUTH_USER', { authUser })
+  },
+
+  checkVuexStore(ctx) {
     if (this.$fireAuth === null) {
       throw 'Vuex Store example not working - this.$fireAuth cannot be accessed.'
     }
@@ -46,8 +59,6 @@ export default {
     } finally {
       // Reset store
       commit('RESET_STORE')
-      // Remove Cookie
-      Cookie.remove('nuxt_fire_auth_access_token')
     }
   }
 }

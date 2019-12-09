@@ -1,8 +1,4 @@
-const options = {
-  firebaseVersion: '7.5.0',
-  messagingSenderId: '807370470428',
-  onFirebaseHosting: false
-}
+const options = {"firebaseVersion":"7.5.2","messagingSenderId":"807370470428","onFirebaseHosting":false}
 const version = options.firebaseVersion
 const messagingSenderId = options.messagingSenderId
 const onFirebaseHosting = options.onFirebaseHosting
@@ -12,7 +8,8 @@ if (onFirebaseHosting) {
   importScripts('/__/firebase/' + version + '/firebase-app.js')
   importScripts('/__/firebase/' + version + '/firebase-messaging.js')
   importScripts('/__/firebase/init.js')
-} else {
+}
+else {
   importScripts(
     'https://www.gstatic.com/firebasejs/' + version + '/firebase-app.js'
   )
@@ -29,10 +26,10 @@ if (onFirebaseHosting) {
 const messaging = firebase.messaging()
 
 messaging.setBackgroundMessageHandler(function(payload) {
-  console.info('SW received the message: ', payload)
-  const notification = payload.notification
+  console.info("SW received the message: ", payload);
+  const notification = payload.notification;
 
-  const notificationTitle = notification.title
+  const notificationTitle = notification.title;
   const notificationOptions = {
     body: notification.body,
     icon: notification.image,
@@ -40,11 +37,11 @@ messaging.setBackgroundMessageHandler(function(payload) {
     actions: [
       // First item is always taken as click action (see comment below)
       {
-        title: 'Visit',
+        title: "Visit",
         action: notification.clickPath
       }
     ]
-  }
+  };
   return self.registration.showNotification(
     notificationTitle,
     notificationOptions

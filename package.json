@@ -14,7 +14,9 @@
     "start": "nuxt start",
     "generate": "nuxt generate",
     "heroku-postbuild": "npm run build",
-    "deploy": "npm run generate && firebase deploy --only hosting --project nuxt-fire-demo"
+    "deploy": "npm run generate && firebase deploy --only hosting --project nuxt-fire-demo",
+    "i:nuxt-fire:local": "npm uninstall nuxt-fire && npm i ../../_PUBLIC/nuxt-fire/packages/nuxt-fire",
+    "i:nuxt-fire": "npm uninstall nuxt-fire && npm i nuxt-fire"
   },
   "dependencies": {
     "@nuxtjs/vuetify": "^1.9.1",
@@ -22,10 +24,11 @@
     "core-js": "^2.6.10",
     "cross-env": "^6.0.3",
     "firebase": "^7.5.2",
-    "js-cookie": "^2.2.1",
+    "firebase-admin": "^8.8.0",
+    "jwt-decode": "^2.2.0",
     "node-fetch": "^2.6.0",
     "nuxt": "^2.10.2",
-    "nuxt-fire": "^3.4.0",
+    "nuxt-fire": "^3.5.0",
     "vue-github-buttons": "^3.1.0"
   },
   "devDependencies": {
