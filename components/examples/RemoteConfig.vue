@@ -4,11 +4,9 @@
       Firebase RemoteConfig
     </h3>
     <div class="links">
-      <v-btn
-        color="primary"
-        outlined
-        @click="readRemoteConfig()"
-      >Reads Remote Config</v-btn>
+      <v-btn color="primary" outlined @click="readRemoteConfig()"
+        >Reads Remote Config</v-btn
+      >
       <pre>
 async readRemoteConfig() {
   try {
@@ -22,7 +20,8 @@ async readRemoteConfig() {
   `Success. Read RemoteConfig parameter 'exampleMessage' is: ${exampleMessage._value}`
   );
 }
-</pre>
+</pre
+      >
     </div>
   </div>
 </template>
@@ -32,17 +31,17 @@ export default {
   methods: {
     async readRemoteConfig() {
       try {
-        await this.$fireConfig.fetchAndActivate();
+        await this.$fireConfig.fetchAndActivate()
       } catch (e) {
-        alert(e);
-        return;
+        alert(e)
+        return
       }
-      console.log(this.$fireConfig);
-      const exampleMessage = await this.$fireConfig.getValue("exampleMessage");
+      console.log(this.$fireConfig)
+      const exampleMessage = await this.$fireConfig.getValue('exampleMessage')
       alert(
         `Success. Read RemoteConfig parameter 'exampleMessage' is: ${exampleMessage._value}`
-      );
+      )
     }
   }
-};
+}
 </script>

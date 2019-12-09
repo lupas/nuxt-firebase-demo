@@ -1,6 +1,5 @@
 <template>
   <div class="LogoWrapper">
-
     <div class="VueToNuxtLogo">
       <div class="Triangle Triangle--two" />
       <div class="Triangle Triangle--one" />
@@ -8,7 +7,6 @@
       <div class="Triangle Triangle--four" />
     </div>
     <FirebaseLogo class="FirebaseLogo" />
-
   </div>
 </template>
 <script>

@@ -4,11 +4,9 @@
       Firebase Functions
     </h3>
     <div class="links">
-      <v-btn
-        color="primary"
-        outlined
-        @click="callTestFunction()"
-      >Call Test Function</v-btn>
+      <v-btn color="primary" outlined @click="callTestFunction()"
+        >Call Test Function</v-btn
+      >
       <p class="mt-1">Might take some seconds.</p>
       <pre>
 async callTestFunction() {
@@ -19,7 +17,8 @@ async callTestFunction() {
     alert(e)
     return
   }
-}</pre>
+}</pre
+      >
     </div>
   </div>
 </template>
@@ -29,13 +28,13 @@ export default {
   methods: {
     async callTestFunction() {
       try {
-        const res = await this.$fireFunc.httpsCallable("testFunction")();
-        alert(res.data.message);
+        const res = await this.$fireFunc.httpsCallable('testFunction')()
+        alert(res.data.message)
       } catch (e) {
-        alert(e);
-        return;
+        alert(e)
+        return
       }
     }
   }
-};
+}
 </script>

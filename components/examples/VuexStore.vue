@@ -7,11 +7,9 @@
       Tests if fireXXX objects can be accessed in a vuex store action.
     </p>
     <div class="links">
-      <v-btn
-        color="primary"
-        outlined
-        @click="checkVuexStore()"
-      >Test Vuex Store</v-btn>
+      <v-btn color="primary" outlined @click="checkVuexStore()"
+        >Test Vuex Store</v-btn
+      >
     </div>
   </div>
 </template>
@@ -21,12 +19,12 @@ export default {
   data() {
     return {
       traceStarted: false
-    };
+    }
   },
   methods: {
     checkVuexStore() {
-      this.$store.dispatch("checkVuexStore");
+      this.$store.dispatch('checkVuexStore')
     }
   }
-};
+}
 </script>

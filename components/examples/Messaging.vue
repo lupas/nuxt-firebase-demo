@@ -43,54 +43,54 @@ export default {
   methods: {
     async requestPermission() {
       try {
-        const permission = await Notification.requestPermission();
-        this.permissionGranted = permission === "granted";
+        const permission = await Notification.requestPermission()
+        this.permissionGranted = permission === 'granted'
       } catch (e) {
-        console.error(e);
-        return;
+        console.error(e)
+        return
       }
     },
     async getIdToken() {
-      let currentToken;
+      let currentToken
       try {
-        currentToken = await this.$fireMess.getToken();
+        currentToken = await this.$fireMess.getToken()
       } catch (e) {
-        console.error("An error occurred while retrieving token. ", e);
-        this.idToken = null;
+        console.error('An error occurred while retrieving token. ', e)
+        this.idToken = null
       }
 
       if (currentToken) {
-        this.idToken = currentToken;
+        this.idToken = currentToken
       } else {
         // Show permission request.
         console.info(
-          "No Instance ID token available. Request permission to generate one."
-        );
+          'No Instance ID token available. Request permission to generate one.'
+        )
         // Show permission UI.
         //updateUIForPushPermissionRequired();
-        this.idToken = null;
+        this.idToken = null
       }
     },
     startListeners() {
-      this.startOnMessageListener();
-      this.startTokenRefreshListener();
-      this.listenersStarted = true;
+      this.startOnMessageListener()
+      this.startTokenRefreshListener()
+      this.listenersStarted = true
     },
     startOnMessageListener() {
-      this.$fireMess.onMessage(payload => {
-        console.log("Message received. ", payload);
-      });
+      this.$fireMess.onMessage((payload) => {
+        console.log('Message received. ', payload)
+      })
     },
     startTokenRefreshListener() {
       this.$fireMess.onTokenRefresh(async () => {
         try {
-          const refreshedToken = await this.$fireMess.getToken();
-          this.idToken = refreshedToken;
+          const refreshedToken = await this.$fireMess.getToken()
+          this.idToken = refreshedToken
         } catch (e) {
-          console.error("Unable to retrieve refreshed token ", err);
+          console.error('Unable to retrieve refreshed token ', err)
         }
-      });
+      })
     }
   }
-};
+}
 </script>

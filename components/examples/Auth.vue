@@ -64,15 +64,15 @@ async createUser() {
 </template>
 
 <script>
-import { mapState, mapGetters, mapActions } from "vuex";
+import { mapState, mapGetters, mapActions } from 'vuex'
 
 export default {
   computed: {
     ...mapState({
-      authUser: state => state.authUser
+      authUser: (state) => state.authUser
     }),
     ...mapGetters({
-      isLoggedIn: "isLoggedIn"
+      isLoggedIn: 'isLoggedIn'
     })
   },
   data: () => ({
@@ -83,28 +83,28 @@ export default {
     formValid: false,
     formRules: {
       email: [
-        v => !!v || "E-mail is required",
-        v => /.+@.+\..+/.test(v) || "E-mail must be valid"
+        (v) => !!v || 'E-mail is required',
+        (v) => /.+@.+\..+/.test(v) || 'E-mail must be valid'
       ],
       names: [
-        v => !!v || "Name is required",
-        v => (v && v.length <= 10) || "Name must be less than 10 characters"
+        (v) => !!v || 'Name is required',
+        (v) => (v && v.length <= 10) || 'Name must be less than 10 characters'
       ],
-      membershipUntil: [v => !!v || "Required"]
+      membershipUntil: [(v) => !!v || 'Required']
     }
   }),
   methods: {
     ...mapActions({
-      logoutUser: "logoutUser"
+      logoutUser: 'logoutUser'
     }),
     async createUser() {
       try {
         await this.$fireAuth.createUserWithEmailAndPassword(
           this.formData.email,
           this.formData.password
-        );
+        )
       } catch (e) {
-        alert(e);
+        alert(e)
       }
     },
     async signInUser() {
@@ -112,18 +112,18 @@ export default {
         await this.$fireAuth.signInWithEmailAndPassword(
           this.formData.email,
           this.formData.password
-        );
+        )
       } catch (e) {
-        alert(e);
+        alert(e)
       }
     },
     async logout() {
       try {
-        await this.logoutUser();
+        await this.logoutUser()
       } catch (e) {
-        alert(e);
+        alert(e)
       }
     }
   }
-};
+}
 </script>

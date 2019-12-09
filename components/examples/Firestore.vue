@@ -4,11 +4,9 @@
       Firebase Firestore
     </h3>
     <div class="links">
-      <v-btn
-        color="primary"
-        outlined
-        @click="writeToFirestore()"
-      >Write to Firestore</v-btn>
+      <v-btn color="primary" outlined @click="writeToFirestore()"
+        >Write to Firestore</v-btn
+      >
       <pre>
 async writeToFirestore() {
   const messageRef = this.$fireStore.collection('message').doc('message')
@@ -23,11 +21,9 @@ async writeToFirestore() {
   alert('Success.')
 }
       </pre>
-      <v-btn
-        color="primary"
-        outlined
-        @click="readFromFirestore()"
-      >Read from Firestore</v-btn>
+      <v-btn color="primary" outlined @click="readFromFirestore()"
+        >Read from Firestore</v-btn
+      >
       <pre>
 async readFromFirestore() {
   const messageRef = this.$fireStore.collection('message').doc('message')
@@ -38,7 +34,8 @@ async readFromFirestore() {
   alert(e)
   return
   }
-}</pre>
+}</pre
+      >
     </div>
   </div>
 </template>
@@ -47,27 +44,27 @@ async readFromFirestore() {
 export default {
   methods: {
     async writeToFirestore() {
-      const messageRef = this.$fireStore.collection("message").doc("message");
+      const messageRef = this.$fireStore.collection('message').doc('message')
       try {
         await messageRef.set({
-          message: "Nuxt-Fire with Firestore rocks!"
-        });
+          message: 'Nuxt-Fire with Firestore rocks!'
+        })
       } catch (e) {
-        alert(e);
-        return;
+        alert(e)
+        return
       }
-      alert("Success.");
+      alert('Success.')
     },
     async readFromFirestore() {
-      const messageRef = this.$fireStore.collection("message").doc("message");
+      const messageRef = this.$fireStore.collection('message').doc('message')
       try {
-        const messageDoc = await messageRef.get();
-        alert(messageDoc.data().message);
+        const messageDoc = await messageRef.get()
+        alert(messageDoc.data().message)
       } catch (e) {
-        alert(e);
-        return;
+        alert(e)
+        return
       }
     }
   }
-};
+}
 </script>
