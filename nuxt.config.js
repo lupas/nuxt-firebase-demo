@@ -77,7 +77,11 @@ module.exports = {
         "BL_xoiuOe5vbb2vJkCNnuswn03NwCsyCkJUgRbuQA5tpg7J4E4z50MO8b-wrrad6fcysYAaFjHqU7D9o0oCWL8w"
     },
     services: {
-      auth: true,
+      auth: {
+        initialize: {
+          onSuccessMutation: "SET_AUTH_USER"
+        }
+      },
       firestore: true,
       functions: {
         // emulatorPort: 12345

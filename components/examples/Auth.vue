@@ -4,11 +4,47 @@
       Firebase Authentication
     </h3>
     <div class="links">
-      <v-btn
-        color="primary"
-        outlined
-        @click="createUser()"
-      >Create User</v-btn>
+      <client-only>
+        <v-form v-if="!isLoggedIn" v-model="formValid">
+          <h5>SignUp / LogIn</h5>
+          <v-text-field
+            v-model="formData.email"
+            color="primary"
+            outlined
+            placeholder="Email"
+            :rules="formRules.email"
+            type="email"
+            autocomplete="username"
+          ></v-text-field>
+          <v-text-field
+            v-model="formData.password"
+            :rules="formRules.password"
+            color="primary"
+            outlined
+            placeholder="Password"
+            type="password"
+            autocomplete="current-password"
+          ></v-text-field>
+          <v-btn
+            :disabled="!formValid"
+            color="primary"
+            outlined
+            @click="createUser()"
+            >Register</v-btn
+          >
+          <v-btn
+            :disabled="!formValid"
+            color="primary"
+            outlined
+            @click="signInUser()"
+            >Sign In</v-btn
+          >
+        </v-form>
+        <div v-else>
+          <p>You are logged in with {{ authUser.email }}.</p>
+          <v-btn color="primary" outlined @click="logout">Logout</v-btn>
+        </div>
+      </client-only>
       <pre>
 async createUser() {
   try {
@@ -19,21 +55,75 @@ async createUser() {
   } catch (e) {
     alert(e)
   }
-}</pre>
-      <p class="mt-1">This will throw a password error coming from Firebase, but proves the point.</p>
+}</pre
+      >
+      <p class="mt-1">
+        This will throw a password error coming from Firebase, but proves the
+        point.
+      </p>
     </div>
   </div>
 </template>
 
 <script>
+import { mapState, mapGetters, mapActions } from "vuex";
+
 export default {
+  computed: {
+    ...mapState({
+      authUser: state => state.authUser
+    }),
+    ...mapGetters({
+      isLoggedIn: "isLoggedIn"
+    })
+  },
+  data: () => ({
+    formData: {
+      email: null,
+      password: null
+    },
+    formValid: false,
+    formRules: {
+      email: [
+        v => !!v || "E-mail is required",
+        v => /.+@.+\..+/.test(v) || "E-mail must be valid"
+      ],
+      names: [
+        v => !!v || "Name is required",
+        v => (v && v.length <= 10) || "Name must be less than 10 characters"
+      ],
+      membershipUntil: [v => !!v || "Required"]
+    }
+  }),
   methods: {
+    ...mapActions({
+      logoutUser: "logoutUser"
+    }),
     async createUser() {
       try {
         await this.$fireAuth.createUserWithEmailAndPassword(
-          "foo@foo.foo",
-          "test"
+          this.formData.email,
+          this.formData.password
         );
+        alert("You have been signed up.");
+      } catch (e) {
+        alert(e);
+      }
+    },
+    async signInUser() {
+      try {
+        await this.$fireAuth.signInWithEmailAndPassword(
+          this.formData.email,
+          this.formData.password
+        );
+        alert("You have been signed in.");
+      } catch (e) {
+        alert(e);
+      }
+    },
+    async logout() {
+      try {
+        await this.logoutUser();
       } catch (e) {
         alert(e);
       }
