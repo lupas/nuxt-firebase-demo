@@ -102,7 +102,7 @@ module.exports = {
       },
       messaging: {
         createServiceWorker: true,
-        onFirebaseHosting: true
+        onFirebaseHosting: false
       }
     }
   },
