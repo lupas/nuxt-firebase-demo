@@ -79,7 +79,8 @@ module.exports = {
     services: {
       auth: {
         initialize: {
-          onSuccessMutation: "SET_AUTH_USER"
+          onSuccessMutation: "SET_AUTH_USER",
+          setAuthCookie: true
         }
       },
       firestore: true,
@@ -135,6 +136,7 @@ module.exports = {
    ** Build configuration
    */
   build: {
+    transpile: [/^nuxt-fire/],
     /*
      ** You can extend webpack config here
      */

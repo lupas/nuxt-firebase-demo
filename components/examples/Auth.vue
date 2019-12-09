@@ -5,6 +5,7 @@
     </h3>
     <div class="links">
       <client-only>
+        <!-- Would work on SSR, but since we are statically generating it doesn't -->
         <v-form v-if="!isLoggedIn" v-model="formValid">
           <h5>SignUp / LogIn</h5>
           <v-text-field
@@ -105,7 +106,6 @@ export default {
           this.formData.email,
           this.formData.password
         );
-        alert("You have been signed up.");
       } catch (e) {
         alert(e);
       }
@@ -116,7 +116,6 @@ export default {
           this.formData.email,
           this.formData.password
         );
-        alert("You have been signed in.");
       } catch (e) {
         alert(e);
       }
