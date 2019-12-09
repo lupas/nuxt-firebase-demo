@@ -4,48 +4,45 @@
       Firebase Authentication
     </h3>
     <div class="links">
-      <client-only>
-        <!-- Would work on SSR, but since we are statically generating it doesn't -->
-        <v-form v-if="!isLoggedIn" v-model="formValid">
-          <h5>SignUp / LogIn</h5>
-          <v-text-field
-            v-model="formData.email"
-            color="primary"
-            outlined
-            placeholder="Email"
-            :rules="formRules.email"
-            type="email"
-            autocomplete="username"
-          ></v-text-field>
-          <v-text-field
-            v-model="formData.password"
-            :rules="formRules.password"
-            color="primary"
-            outlined
-            placeholder="Password"
-            type="password"
-            autocomplete="current-password"
-          ></v-text-field>
-          <v-btn
-            :disabled="!formValid"
-            color="primary"
-            outlined
-            @click="createUser()"
-            >Register</v-btn
-          >
-          <v-btn
-            :disabled="!formValid"
-            color="primary"
-            outlined
-            @click="signInUser()"
-            >Sign In</v-btn
-          >
-        </v-form>
-        <div v-else>
-          <p>You are logged in with {{ authUser.email }}.</p>
-          <v-btn color="primary" outlined @click="logout">Logout</v-btn>
-        </div>
-      </client-only>
+      <v-form v-if="!isLoggedIn" v-model="formValid">
+        <h5>SignUp / LogIn</h5>
+        <v-text-field
+          v-model="formData.email"
+          color="primary"
+          outlined
+          placeholder="Email"
+          :rules="formRules.email"
+          type="email"
+          autocomplete="username"
+        ></v-text-field>
+        <v-text-field
+          v-model="formData.password"
+          :rules="formRules.password"
+          color="primary"
+          outlined
+          placeholder="Password"
+          type="password"
+          autocomplete="current-password"
+        ></v-text-field>
+        <v-btn
+          :disabled="!formValid"
+          color="primary"
+          outlined
+          @click="createUser()"
+          >Register</v-btn
+        >
+        <v-btn
+          :disabled="!formValid"
+          color="primary"
+          outlined
+          @click="signInUser()"
+          >Sign In</v-btn
+        >
+      </v-form>
+      <div v-else>
+        <p>You are logged in with {{ authUser.email }}.</p>
+        <v-btn color="primary" outlined @click="logout">Logout</v-btn>
+      </div>
       <pre>
 async createUser() {
   try {
