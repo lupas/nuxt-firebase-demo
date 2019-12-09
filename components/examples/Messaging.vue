@@ -61,7 +61,6 @@ export default {
 
       if (currentToken) {
         this.idToken = currentToken;
-        console.log(this.idToken);
       } else {
         // Show permission request.
         console.info(
