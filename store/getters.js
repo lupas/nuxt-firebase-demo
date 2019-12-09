@@ -1,9 +1,9 @@
 export default {
-  isLoggedIn: state => {
+  isLoggedIn: (state) => {
     try {
-      return state.authUser.id !== null;
+      return state.authUser.id !== null
     } catch {
-      return false;
+      return false
     }
   }
-};
+}

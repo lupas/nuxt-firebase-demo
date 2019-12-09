@@ -1,10 +1,7 @@
 <template>
   <v-container>
     <v-row justify="center">
-      <v-col
-        cols="12"
-        align="center"
-      >
+      <v-col cols="12" align="center">
         <logo />
         <h1 class="display-4 my-2 secondary--text">
           nuxt-fire
@@ -16,14 +13,13 @@
         <client-only>
           <GitHubButtons />
         </client-only>
-        <p>by <a
-            href="https://twitter.com/pascalluther"
-            target="_blank"
-          >Pascal Luther</a> / <a
-            href="https://github.com/lupas"
-            target="_blank"
-          >@lupas</a></p>
-
+        <p>
+          by
+          <a href="https://twitter.com/pascalluther" target="_blank"
+            >Pascal Luther</a
+          >
+          / <a href="https://github.com/lupas" target="_blank">@lupas</a>
+        </p>
       </v-col>
 
       <v-col
@@ -33,28 +29,27 @@
         md="7"
         align="center"
       >
-        <hr>
+        <hr />
         <component :is="component"></component>
       </v-col>
-
     </v-row>
   </v-container>
 </template>
 
 <script>
-import Logo from "~/components/Logo.vue";
-import Badgens from "~/components/Badgens.vue";
-import GitHubButtons from "~/components/GitHubButtons.vue";
-import Auth from "~/components/examples/Auth.vue";
-import Firestore from "~/components/examples/Firestore.vue";
-import Functions from "~/components/examples/Functions.vue";
-import RealTimeDatabase from "~/components/examples/RealTimeDatabase.vue";
-import Storage from "~/components/examples/Storage.vue";
-import Performance from "~/components/examples/Performance.vue";
-import VuexStore from "~/components/examples/VuexStore.vue";
-import Analytics from "~/components/examples/Analytics.vue";
-import RemoteConfig from "~/components/examples/RemoteConfig.vue";
-import Messaging from "~/components/examples/Messaging.vue";
+import Logo from '~/components/Logo.vue'
+import Badgens from '~/components/Badgens.vue'
+import GitHubButtons from '~/components/GitHubButtons.vue'
+import Auth from '~/components/examples/Auth.vue'
+import Firestore from '~/components/examples/Firestore.vue'
+import Functions from '~/components/examples/Functions.vue'
+import RealTimeDatabase from '~/components/examples/RealTimeDatabase.vue'
+import Storage from '~/components/examples/Storage.vue'
+import Performance from '~/components/examples/Performance.vue'
+import VuexStore from '~/components/examples/VuexStore.vue'
+import Analytics from '~/components/examples/Analytics.vue'
+import RemoteConfig from '~/components/examples/RemoteConfig.vue'
+import Messaging from '~/components/examples/Messaging.vue'
 
 export default {
   components: {
@@ -86,7 +81,7 @@ export default {
       VuexStore
     ]
   })
-};
+}
 </script>
 
 <style>
