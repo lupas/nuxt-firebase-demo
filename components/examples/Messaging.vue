@@ -78,7 +78,7 @@ export default {
     },
     startOnMessageListener() {
       this.$fireMess.onMessage((payload) => {
-        console.log('Message received. ', payload)
+        console.info('Message received. ', payload)
       })
     },
     startTokenRefreshListener() {

@@ -36,7 +36,7 @@ export default {
         alert(e)
         return
       }
-      console.log(this.$fireConfig)
+      console.info(this.$fireConfig)
       const exampleMessage = await this.$fireConfig.getValue('exampleMessage')
       alert(
         `Success. Read RemoteConfig parameter 'exampleMessage' is: ${exampleMessage._value}`

@@ -23,14 +23,14 @@ export default {
       const trace = this.$firePerf.trace('testTrace')
       trace.start()
       this.traceStarted = true
-      console.log('Firebase Performance Trace Start')
+      console.info('Firebase Performance Trace Start')
       const ctx = this
       setTimeout(function() {
         for (let step = 0; step < 100; step++) {
           // Runs x times
         }
         trace.stop()
-        console.log('Firebase Performance Trace Stop')
+        console.info('Firebase Performance Trace Stop')
         ctx.traceStarted = false
       }, 2000)
     }
