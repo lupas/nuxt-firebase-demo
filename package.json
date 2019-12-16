@@ -23,22 +23,22 @@
     "babel-eslint": "^10.0.3",
     "core-js": "^2.6.10",
     "cross-env": "^6.0.3",
-    "firebase": "^7.5.2",
+    "firebase": "^7.6.0",
     "firebase-admin": "^8.8.0",
     "jwt-decode": "^2.2.0",
     "node-fetch": "^2.6.0",
     "nuxt": "^2.10.2",
-    "nuxt-fire": "^3.5.0",
+    "nuxt-fire": "file:../nuxt-fire/packages/nuxt-fire",
     "vue-github-buttons": "^3.1.0"
   },
   "devDependencies": {
-    "nodemon": "^1.19.4",
+    "nodemon": "^2.0.2",
     "@nuxtjs/eslint-config": "^2.0.0",
     "@nuxtjs/eslint-module": "^1.1.0",
     "@vue/eslint-config-prettier": "^6.0.0",
     "eslint-config-prettier": "^6.7.0",
     "eslint-plugin-nuxt": "^0.5.0",
-    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-vuetify": "^1.0.0-beta.5",
     "prettier": "^1.19.1"
   }
