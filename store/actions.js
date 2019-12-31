@@ -19,11 +19,14 @@ export default {
     /** Get the VERIFIED authUser from the server */
 
     const ssrVerifiedAuthUser = ctx.res.verifiedFireAuthUser
+    const ssrVerifiedAuthUserClaims = ctx.res.verifiedFireAuthUserClaims
 
-    if (ssrVerifiedAuthUser) {
+    if (ssrVerifiedAuthUserClaims) {
       console.info(
         'Auth User verified on server-side. User: ',
-        ssrVerifiedAuthUser
+        ssrVerifiedAuthUser,
+        'Claims:',
+        ssrVerifiedAuthUserClaims
       )
       commit('SET_AUTH_USER', {
         authUser: ssrVerifiedAuthUser
@@ -31,7 +34,7 @@ export default {
     }
   },
 
-  handleSuccessfulAuthentication({ commit }, { authUser }) {
+  handleSuccessfulAuthentication({ commit }, { authUser, claims }) {
     // Install servicerWorker if supported on sign-in/sign-up page.
     if (process.browser && 'serviceWorker' in navigator) {
       navigator.serviceWorker.register('/firebase-auth-sw.js', { scope: '/' })
