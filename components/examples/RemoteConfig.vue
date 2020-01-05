@@ -26,8 +26,10 @@ async readRemoteConfig() {
   </div>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import Vue from 'vue'
+
+export default Vue.extend({
   methods: {
     async readRemoteConfig() {
       try {
@@ -37,11 +39,13 @@ export default {
         return
       }
       console.info(this.$fireConfig)
-      const exampleMessage = await this.$fireConfig.getValue('exampleMessage')
+      const exampleMessage: any = await this.$fireConfig.getValue(
+        'exampleMessage'
+      )
       alert(
         `Success. Read RemoteConfig parameter 'exampleMessage' is: ${exampleMessage._value}`
       )
     }
   }
-}
+})
 </script>

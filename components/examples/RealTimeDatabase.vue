@@ -40,8 +40,10 @@ async readFromRealtimeDb() {
   </div>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import Vue from 'vue'
+
+export default Vue.extend({
   methods: {
     async writeToRealtimeDb() {
       const messageRef = this.$fireDb.ref('message')
@@ -66,5 +68,5 @@ export default {
       }
     }
   }
-}
+})
 </script>

@@ -19,8 +19,10 @@ async logEvent() {
   </div>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import Vue from 'vue'
+
+export default Vue.extend({
   methods: {
     async logEvent() {
       try {
@@ -31,5 +33,5 @@ export default {
       }
     }
   }
-}
+})
 </script>

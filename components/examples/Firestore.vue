@@ -40,8 +40,10 @@ async readFromFirestore() {
   </div>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import Vue from 'vue'
+
+export default Vue.extend({
   methods: {
     async writeToFirestore() {
       const messageRef = this.$fireStore.collection('message').doc('message')
@@ -58,13 +60,18 @@ export default {
     async readFromFirestore() {
       const messageRef = this.$fireStore.collection('message').doc('message')
       try {
-        const messageDoc = await messageRef.get()
-        alert(messageDoc.data().message)
+        const snapshot = await messageRef.get()
+        const doc = snapshot.data()
+        if (!doc) {
+          alert('Document does not exist.')
+          return
+        }
+        alert(doc.message)
       } catch (e) {
         alert(e)
         return
       }
     }
   }
-}
+})
 </script>

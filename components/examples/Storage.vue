@@ -33,8 +33,10 @@ async getFileUrl() {
   </div>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import Vue from 'vue'
+
+export default Vue.extend({
   methods: {
     async uploadFile() {
       const storageRef = this.$fireStorage.ref().child('message.txt')
@@ -56,5 +58,5 @@ export default {
       }
     }
   }
-}
+})
 </script>

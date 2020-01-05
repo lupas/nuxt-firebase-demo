@@ -63,13 +63,14 @@ async createUser() {
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import Vue from 'vue'
 import { mapState, mapGetters, mapActions } from 'vuex'
 
-export default {
+export default Vue.extend({
   computed: {
     ...mapState({
-      authUser: (state) => state.authUser
+      authUser: (state: any) => state.authUser
     }),
     ...mapGetters({
       isLoggedIn: 'isLoggedIn'
@@ -77,20 +78,21 @@ export default {
   },
   data: () => ({
     formData: {
-      email: null,
-      password: null
+      email: '',
+      password: ''
     },
     formValid: false,
     formRules: {
       email: [
-        (v) => !!v || 'E-mail is required',
-        (v) => /.+@.+\..+/.test(v) || 'E-mail must be valid'
+        (v: string) => !!v || 'E-mail is required',
+        (v: string) => /.+@.+\..+/.test(v) || 'E-mail must be valid'
       ],
       names: [
-        (v) => !!v || 'Name is required',
-        (v) => (v && v.length <= 10) || 'Name must be less than 10 characters'
+        (v: string) => !!v || 'Name is required',
+        (v: string) =>
+          (v && v.length <= 10) || 'Name must be less than 10 characters'
       ],
-      membershipUntil: [(v) => !!v || 'Required']
+      membershipUntil: [(v: string) => !!v || 'Required']
     }
   }),
   methods: {
@@ -125,5 +127,5 @@ export default {
       }
     }
   }
-}
+})
 </script>

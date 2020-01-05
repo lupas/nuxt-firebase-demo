@@ -37,7 +37,7 @@ export default () => {
      */
     modules: ['nuxt-fire'],
 
-    buildModules: ['@nuxtjs/vuetify'],
+    buildModules: ['@nuxtjs/vuetify', '@nuxt/typescript-build'],
 
     vuetify: {
       // treeShake: false,

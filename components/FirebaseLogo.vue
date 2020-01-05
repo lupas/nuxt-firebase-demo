@@ -133,25 +133,24 @@
   </div>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import Vue from 'vue'
+
+export default Vue.extend({
   data() {
     return {
       size: 0.3
     }
   },
   computed: {
-    height() {
+    height(): string {
       return `${this.size * 351}px`
     },
-    width() {
+    width(): string {
       return `${this.size * 256}px`
     }
   }
-}
+})
 </script>
 
-<style scoped>
-.svg {
-}
-</style>
+<style scoped></style>

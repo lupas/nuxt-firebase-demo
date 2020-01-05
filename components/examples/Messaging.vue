@@ -33,13 +33,17 @@
   </v-row>
 </template>
 
-<script>
-export default {
-  data: () => ({
-    listenersStarted: false,
-    permissionGranted: false,
-    idToken: null
-  }),
+<script lang="ts">
+import Vue from 'vue'
+
+export default Vue.extend({
+  data() {
+    return {
+      listenersStarted: false,
+      permissionGranted: false,
+      idToken: '' as string | null
+    }
+  },
   methods: {
     async requestPermission() {
       try {
@@ -87,10 +91,10 @@ export default {
           const refreshedToken = await this.$fireMess.getToken()
           this.idToken = refreshedToken
         } catch (e) {
-          console.error('Unable to retrieve refreshed token ', err)
+          console.error('Unable to retrieve refreshed token ', e)
         }
       })
     }
   }
-}
+})
 </script>

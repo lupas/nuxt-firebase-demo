@@ -36,7 +36,8 @@
   </v-container>
 </template>
 
-<script>
+<script lang="ts">
+import Vue from 'vue'
 import Logo from '~/components/Logo.vue'
 import Badgens from '~/components/Badgens.vue'
 import GitHubButtons from '~/components/GitHubButtons.vue'
@@ -51,7 +52,7 @@ import Analytics from '~/components/examples/Analytics.vue'
 import RemoteConfig from '~/components/examples/RemoteConfig.vue'
 import Messaging from '~/components/examples/Messaging.vue'
 
-export default {
+export default Vue.extend({
   components: {
     Logo,
     GitHubButtons,
@@ -81,7 +82,7 @@ export default {
       VuexStore
     ]
   })
-}
+})
 </script>
 
 <style>

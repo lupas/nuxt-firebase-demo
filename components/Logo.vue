@@ -9,14 +9,18 @@
     <FirebaseLogo class="FirebaseLogo" />
   </div>
 </template>
-<script>
-import FirebaseLogo from '~/components/FirebaseLogo'
-export default {
+
+<script lang="ts">
+import Vue from 'vue'
+import FirebaseLogo from '~/components/FirebaseLogo.vue'
+
+export default Vue.extend({
   components: {
     FirebaseLogo
   }
-}
+})
 </script>
+
 <style>
 .LogoWrapper {
   display: inline-block;
