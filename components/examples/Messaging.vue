@@ -1,9 +1,9 @@
 <template>
   <v-row>
-    <h3 class="display-1 mb-5">
-      Firebase Messaging
-    </h3>
     <v-col cols="12" class="links">
+      <h3 class="display-1 mb-5">
+        Firebase Messaging
+      </h3>
       <v-btn
         :disabled="listenersStarted"
         color="primary"
