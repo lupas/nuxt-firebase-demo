@@ -19,7 +19,7 @@
         >Request Permission</v-btn
       >
       <v-btn
-        :disabled="!listenersStarted || !permissionGranted || idToken !== null"
+        :disabled="!listenersStarted || !permissionGranted || idToken !== ''"
         color="primary"
         outlined
         @click="getIdToken"
@@ -41,7 +41,7 @@ export default Vue.extend({
     return {
       listenersStarted: false,
       permissionGranted: false,
-      idToken: '' as string | null
+      idToken: ''
     }
   },
   methods: {
@@ -60,7 +60,7 @@ export default Vue.extend({
         currentToken = await this.$fireMess.getToken()
       } catch (e) {
         console.error('An error occurred while retrieving token. ', e)
-        this.idToken = null
+        this.idToken = ''
       }
 
       if (currentToken) {
@@ -72,7 +72,7 @@ export default Vue.extend({
         )
         // Show permission UI.
         //updateUIForPushPermissionRequired();
-        this.idToken = null
+        this.idToken = ''
       }
     },
     startListeners() {

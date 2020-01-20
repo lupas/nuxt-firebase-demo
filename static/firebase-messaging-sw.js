@@ -1,6 +1,5 @@
-const options = {"firebaseVersion":"7.5.2","messagingSenderId":"807370470428","onFirebaseHosting":false}
+const options = {"firebaseVersion":"7.7.0","config":{"apiKey":"AIzaSyDa-YwgWTp2GDyVYEfv-XLb62100_HoEvU","authDomain":"nuxt-fire-demo.firebaseapp.com","databaseURL":"https:\u002F\u002Fnuxt-fire-demo.firebaseio.com","projectId":"nuxt-fire-demo","storageBucket":"nuxt-fire-demo.appspot.com","messagingSenderId":"807370470428","appId":"1:807370470428:web:26da98c86c3fd352","measurementId":"G-XT6PVC1D4X","fcmPublicVapidKey":"BL_xoiuOe5vbb2vJkCNnuswn03NwCsyCkJUgRbuQA5tpg7J4E4z50MO8b-wrrad6fcysYAaFjHqU7D9o0oCWL8w"},"onFirebaseHosting":false}
 const version = options.firebaseVersion
-const messagingSenderId = options.messagingSenderId
 const onFirebaseHosting = options.onFirebaseHosting
 
 if (onFirebaseHosting) {
@@ -16,9 +15,7 @@ else {
   importScripts(
     'https://www.gstatic.com/firebasejs/' + version + '/firebase-messaging.js'
   )
-  firebase.initializeApp({
-    messagingSenderId: messagingSenderId
-  })
+  firebase.initializeApp(options.config)
 }
 
 // Retrieve an instance of Firebase Messaging so that it can handle background

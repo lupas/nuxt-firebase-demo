@@ -77,6 +77,7 @@ export default () => {
         fcmPublicVapidKey:
           'BL_xoiuOe5vbb2vJkCNnuswn03NwCsyCkJUgRbuQA5tpg7J4E4z50MO8b-wrrad6fcysYAaFjHqU7D9o0oCWL8w'
       },
+      onFirebaseHosting: false,
       services: {
         auth: {
           initialize: {
@@ -102,8 +103,7 @@ export default () => {
           }
         },
         messaging: {
-          createServiceWorker: true,
-          onFirebaseHosting: false
+          createServiceWorker: true
         }
       }
     },

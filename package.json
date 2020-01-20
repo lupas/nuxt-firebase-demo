@@ -6,28 +6,29 @@
   "repository": "https://github.com/lupas/nuxt-fire-demo",
   "homepage": "https://github.com/lupas",
   "keywords": [
-    "nuxt, firebase"
+    "nuxt",
+    "firebase"
   ],
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "heroku-postbuild": "npm run build",
-    "deploy": "npm run generate && firebase deploy --only hosting --project nuxt-fire-demo",
-    "i:nuxt-fire:local": "npm uninstall nuxt-fire && npm i ../../_PUBLIC/nuxt-fire/packages/nuxt-fire",
-    "i:nuxt-fire": "npm uninstall nuxt-fire && npm i nuxt-fire"
+    "heroku-postbuild": "yarn run build",
+    "deploy": "yarn run generate && firebase deploy --only hosting --project nuxt-fire-demo",
+    "i:nuxt-fire:local": "yarn remove nuxt-fire && yarn add ../../_PUBLIC/nuxt-fire/packages/nuxt-fire",
+    "i:nuxt-fire": "yarn remove nuxt-fire && yarn add nuxt-fire"
   },
   "dependencies": {
     "@nuxtjs/vuetify": "^1.9.1",
     "core-js": "^2.6.10",
     "cross-env": "^6.0.3",
-    "firebase": "^7.6.0",
+    "firebase": "^7.7.0",
     "firebase-admin": "^8.8.0",
     "jwt-decode": "^2.2.0",
     "node-fetch": "^2.6.0",
     "nuxt": "^2.10.2",
-    "nuxt-fire": "^3.5.4",
+    "nuxt-fire": "^3.5.5",
     "vue-github-buttons": "^3.1.0"
   },
   "devDependencies": {
