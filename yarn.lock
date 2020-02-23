@@ -6694,8 +6694,10 @@ number-is-nan@^1.0.0:
   resolved "https://registry.yarnpkg.com/number-is-nan/-/number-is-nan-1.0.1.tgz#097b602b53422a522c1afb8790318336941a011d"
   integrity sha1-CXtgK1NCKlIsGvuHkDGDNpQaAR0=
 
-nuxt-fire@../../_PUBLIC/nuxt-fire/packages/nuxt-fire:
+nuxt-fire@^3.5.5:
   version "3.5.5"
+  resolved "https://registry.yarnpkg.com/nuxt-fire/-/nuxt-fire-3.5.5.tgz#135d570c64d8931fa81e1dd7616734d452e6a497"
+  integrity sha512-DRVmxb9ivaAWQTDQeLkTwsDsWHb45cL9lKQ+HGYEI0ipvSQF+rTredb/jGWvgyXPW5D6pQ59P7SJyX54QNN2yw==
   dependencies:
     firebase-admin "^8.8.0"
     jwt-decode "^2.2.0"

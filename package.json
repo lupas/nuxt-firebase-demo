@@ -29,7 +29,7 @@
     "jwt-decode": "^2.2.0",
     "node-fetch": "^2.6.0",
     "nuxt": "^2.10.2",
-    "nuxt-fire": "../../_PUBLIC/nuxt-fire/packages/nuxt-fire",
+    "nuxt-fire": "^3.5.5",
     "vue-github-buttons": "^3.1.0"
   },
   "devDependencies": {
