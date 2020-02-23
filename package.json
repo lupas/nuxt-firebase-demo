@@ -20,11 +20,11 @@
     "i:nuxt-fire": "yarn remove nuxt-fire && yarn add nuxt-fire"
   },
   "dependencies": {
-    "@nuxtjs/vuetify": "^1.9.1",
+    "@nuxtjs/vuetify": "^1.11.0",
     "core-js": "^2.6.10",
-    "cross-env": "^6.0.3",
-    "firebase": "^7.7.0",
-    "firebase-admin": "^8.8.0",
+    "cross-env": "^7.0.0",
+    "firebase": "^7.9.1",
+    "firebase-admin": "^8.9.2",
     "jwt-decode": "^2.2.0",
     "node-fetch": "^2.6.0",
     "nuxt": "^2.10.2",
@@ -32,12 +32,12 @@
     "vue-github-buttons": "^3.1.0"
   },
   "devDependencies": {
-    "@nuxt/typescript-build": "^0.5.5",
-    "@nuxtjs/eslint-config-typescript": "^1.0.0",
+    "@nuxt/typescript-build": "^0.5.7",
+    "@nuxtjs/eslint-config-typescript": "^1.0.2",
     "@vue/eslint-config-prettier": "^6.0.0",
-    "eslint-config-prettier": "^6.7.0",
+    "eslint-config-prettier": "^6.10.0",
     "eslint-plugin-prettier": "^3.1.2",
-    "eslint-plugin-vuetify": "^1.0.0-beta.5",
+    "eslint-plugin-vuetify": "^1.0.0-beta.6",
     "nodemon": "^2.0.2",
     "prettier": "^1.19.1"
   }
