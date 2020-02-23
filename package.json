@@ -10,16 +10,17 @@
     "firebase"
   ],
   "scripts": {
-    "dev": "nuxt",
-    "build": "nuxt build",
-    "start": "nuxt start",
-    "generate": "nuxt generate",
+    "dev": "nuxt-ts",
+    "build": "nuxt-ts build",
+    "generate": "nuxt-ts generate",
+    "start": "nuxt-ts start",
     "heroku-postbuild": "yarn run build",
     "deploy": "yarn run generate && firebase deploy --only hosting --project nuxt-fire-demo",
     "i:nuxt-fire:local": "yarn remove nuxt-fire && yarn add ../../_PUBLIC/nuxt-fire/packages/nuxt-fire",
     "i:nuxt-fire": "yarn remove nuxt-fire && yarn add nuxt-fire"
   },
   "dependencies": {
+    "@nuxt/typescript-runtime": "^0.3.9",
     "@nuxtjs/vuetify": "^1.11.0",
     "core-js": "^2.6.10",
     "cross-env": "^7.0.0",
@@ -28,7 +29,7 @@
     "jwt-decode": "^2.2.0",
     "node-fetch": "^2.6.0",
     "nuxt": "^2.10.2",
-    "nuxt-fire": "^3.5.5",
+    "nuxt-fire": "../../_PUBLIC/nuxt-fire/packages/nuxt-fire",
     "vue-github-buttons": "^3.1.0"
   },
   "devDependencies": {
