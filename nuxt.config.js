@@ -35,7 +35,7 @@ export default () => {
     /*
      ** Nuxt.js modules
      */
-    modules: ['nuxt-fire'],
+    modules: ['@nuxtjs/firebase'],
 
     buildModules: ['@nuxtjs/vuetify', '@nuxt/typescript-build'],
 
@@ -64,7 +64,7 @@ export default () => {
     },
 
     //Nuxt-Fire Module Options
-    fire: {
+    firebase: {
       config: {
         apiKey: 'AIzaSyDa-YwgWTp2GDyVYEfv-XLb62100_HoEvU',
         authDomain: 'nuxt-fire-demo.firebaseapp.com',

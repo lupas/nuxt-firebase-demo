@@ -1383,6 +1383,15 @@
     eslint-plugin-unicorn "^16.0.0"
     eslint-plugin-vue "^6.1.2"
 
+"@nuxtjs/firebase@^4.0.0":
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/firebase/-/firebase-4.0.0.tgz#9e8f363a764edacb66fcc5fefd9062864c1d7cb0"
+  integrity sha512-LX9wJzUAZ2PNsIJJuxB5wCbuxR5x9V7JGHVV6vevmKwHpdhrPxB4YtENWlFhfgTzagYZt9h9xfNDSaVn6HSalg==
+  dependencies:
+    firebase-admin "^8.9.2"
+    jwt-decode "^2.2.0"
+    lodash "^4.17.15"
+
 "@nuxtjs/vuetify@^1.11.0":
   version "1.11.0"
   resolved "https://registry.yarnpkg.com/@nuxtjs/vuetify/-/vuetify-1.11.0.tgz#de8bc9e737479e6c167c2ff45122811362fee7b1"
@@ -4528,7 +4537,7 @@ find-up@^4.0.0, find-up@^4.1.0:
     locate-path "^5.0.0"
     path-exists "^4.0.0"
 
-firebase-admin@^8.8.0, firebase-admin@^8.9.2:
+firebase-admin@^8.9.2:
   version "8.9.2"
   resolved "https://registry.yarnpkg.com/firebase-admin/-/firebase-admin-8.9.2.tgz#248ba184dc13b4929b043870a2067787a0dd013e"
   integrity sha512-ix4qcx+hHnr3mnc41Z8EzQa9Mr+2nhogLEv6ktkOCCpdKJ+9HxW9vikRCElSbC8ICHLD0KIH0GVOIZK80vbvqw==
@@ -6693,15 +6702,6 @@ number-is-nan@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/number-is-nan/-/number-is-nan-1.0.1.tgz#097b602b53422a522c1afb8790318336941a011d"
   integrity sha1-CXtgK1NCKlIsGvuHkDGDNpQaAR0=
-
-nuxt-fire@^3.5.5:
-  version "3.5.5"
-  resolved "https://registry.yarnpkg.com/nuxt-fire/-/nuxt-fire-3.5.5.tgz#135d570c64d8931fa81e1dd7616734d452e6a497"
-  integrity sha512-DRVmxb9ivaAWQTDQeLkTwsDsWHb45cL9lKQ+HGYEI0ipvSQF+rTredb/jGWvgyXPW5D6pQ59P7SJyX54QNN2yw==
-  dependencies:
-    firebase-admin "^8.8.0"
-    jwt-decode "^2.2.0"
-    lodash "^4.17.15"
 
 nuxt@^2.10.2:
   version "2.11.0"
