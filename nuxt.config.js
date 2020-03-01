@@ -108,31 +108,6 @@ export default () => {
       }
     },
 
-    // //Nuxt-Fire Module Options
-    // fire: {
-    //   auth: {
-    //     initialize: {
-    //       onSuccessMutation: "SET_AUTH_USER",
-    //       onSuccessAction: null,
-    //       onErrorMutation: null,
-    //       onErrorAction: "handleAuthError"
-    //     }
-    //   },
-    //   remoteConfig: {
-    //     settings: {
-    //       fetchTimeoutMillis: 60000,
-    //       minimumFetchIntervalMillis: 43200000
-    //     },
-    //     defaultConfig: {
-    //       welcome_message: "Welcome"
-    //     }
-    //   },
-    //   messaging: {
-    //     createServiceWorker: true,
-    //     onFirebaseHosting: false
-    //   }
-    // },
-
     /*
      ** Build configuration
      */
