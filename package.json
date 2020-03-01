@@ -20,12 +20,12 @@
     "i:firebase": "yarn remove @nuxtjs/firebase && yarn add @nuxtjs/firebase"
   },
   "dependencies": {
-    "@nuxt/typescript-runtime": "^0.3.9",
-    "@nuxtjs/firebase": "^4.0.0",
+    "@nuxt/typescript-runtime": "^0.3.10",
+    "@nuxtjs/firebase": "^4.1.0",
     "@nuxtjs/vuetify": "^1.11.0",
     "core-js": "^2.6.10",
     "cross-env": "^7.0.0",
-    "firebase": "^7.9.1",
+    "firebase": "^7.9.3",
     "firebase-admin": "^8.9.2",
     "jwt-decode": "^2.2.0",
     "node-fetch": "^2.6.0",
@@ -33,7 +33,7 @@
     "vue-github-buttons": "^3.1.0"
   },
   "devDependencies": {
-    "@nuxt/typescript-build": "^0.5.7",
+    "@nuxt/typescript-build": "^0.5.8",
     "@nuxtjs/eslint-config-typescript": "^1.0.2",
     "@vue/eslint-config-prettier": "^6.0.0",
     "eslint-config-prettier": "^6.10.0",
