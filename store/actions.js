@@ -17,12 +17,11 @@ export default {
     )
 
     /** Get the VERIFIED authUser from the server */
-
     let ssrVerifiedAuthUser, ssrVerifiedAuthUserClaims
     // ctx.res does not exist in nuxt "generate mode"
     if (ctx.res) {
-      ctx.res.verifiedFireAuthUser
-      ctx.res.verifiedFireAuthUserClaims
+      ssrVerifiedAuthUser = ctx.res.verifiedFireAuthUser
+      ssrVerifiedAuthUserClaims = ctx.res.verifiedFireAuthUserClaims
     }
 
     if (ssrVerifiedAuthUserClaims) {
