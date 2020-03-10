@@ -16,11 +16,12 @@
     "start": "nuxt-ts start",
     "heroku-postbuild": "yarn run build",
     "deploy": "yarn run generate && firebase deploy --only hosting --project nuxt-fire-demo",
-    "i:firebase:local": "yarn remove @nuxtjs/firebase && yarn add ../../_PUBLIC/@nuxtjs-firebase/packages/firebase-module",
-    "i:firebase": "yarn remove @nuxtjs/firebase && yarn add @nuxtjs/firebase"
+    "i:firebase:local": "yarn remove @nuxtjs/firebase && yarn add ./../@nuxtjs-firebase",
+    "i:firebase": "yarn remove @nuxtjs/firebase && yarn add @nuxtjs/firebase",
+    "startEmulators": "firebase --project nuxt-fire-demo emulators:start"
   },
   "dependencies": {
-    "@nuxtjs/firebase": "^4.1.0",
+    "@nuxtjs/firebase": "^4.2.2",
     "@nuxtjs/vuetify": "^1.11.0",
     "core-js": "^2.6.10",
     "cross-env": "^7.0.1",
@@ -32,8 +33,8 @@
     "vue-github-buttons": "^3.1.0"
   },
   "devDependencies": {
-    "@nuxt/typescript-runtime": "^0.4.0",
     "@nuxt/typescript-build": "^0.6.0",
+    "@nuxt/typescript-runtime": "^0.4.0",
     "@nuxtjs/eslint-config-typescript": "^1.0.2",
     "@vue/eslint-config-prettier": "^6.0.0",
     "eslint-config-prettier": "^6.10.0",
