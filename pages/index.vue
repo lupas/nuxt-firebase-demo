@@ -38,7 +38,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import Logo from '~/components/Logo.vue'
+import Logo from '~/components/Logo/index.vue'
 import Badgens from '~/components/Badgens.vue'
 import GitHubButtons from '~/components/GitHubButtons.vue'
 import Auth from '~/components/examples/Auth.vue'

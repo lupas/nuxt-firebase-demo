@@ -1,6 +1,5 @@
 <template>
-  <div>
-    <svg
+  <svg
       :width="width"
       :height="height"
       viewBox="0 0 256 351"
@@ -130,7 +129,6 @@
         ></path>
       </g>
     </svg>
-  </div>
 </template>
 
 <script lang="ts">
@@ -153,4 +151,8 @@ export default Vue.extend({
 })
 </script>
 
-<style scoped></style>
+<style scoped>
+	.st10{fill:#00C58E;}
+	.st11{fill:#2F495E;}
+	.st12{fill:#108775;}
+</style>
