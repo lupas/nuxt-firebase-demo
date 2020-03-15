@@ -65,7 +65,7 @@ async createUser() {
 
 <script lang="ts">
 import Vue from 'vue'
-import { mapState, mapGetters, mapActions } from 'vuex'
+import { mapState, mapGetters } from 'vuex'
 
 export default Vue.extend({
   computed: {
@@ -96,9 +96,6 @@ export default Vue.extend({
     }
   }),
   methods: {
-    ...mapActions({
-      logoutUser: 'logoutUser'
-    }),
     async createUser() {
       try {
         await this.$fireAuth.createUserWithEmailAndPassword(
@@ -121,7 +118,7 @@ export default Vue.extend({
     },
     async logout() {
       try {
-        await this.logoutUser()
+        await this.$fireAuth.signOut()
       } catch (e) {
         alert(e)
       }

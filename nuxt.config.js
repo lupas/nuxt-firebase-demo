@@ -35,7 +35,7 @@ export default () => {
     /*
      ** Nuxt.js modules
      */
-    modules: ['@nuxtjs/firebase'],
+    modules: ['@nuxtjs/pwa','@nuxtjs/firebase'],
 
     buildModules: ['@nuxtjs/vuetify', '@nuxt/typescript-build'],
 
@@ -81,9 +81,9 @@ export default () => {
       services: {
         auth: {
           initialize: {
-            onSuccessAction: 'handleSuccessfulAuthentication',
-            ssr: true
-          }
+            onAuthStateChangedAction: 'onAuthStateChanged'
+          },
+          ssr: true
         },
         firestore: true,
         functions: {
@@ -105,6 +105,17 @@ export default () => {
         messaging: {
           createServiceWorker: true
         }
+      }
+    },
+
+    pwa: {
+      workbox: {
+        importScripts: [
+          '/firebase-auth-sw.js'
+        ],
+        // by default the workbox module will not install the service worker in dev environment to avoid conflicts with HMR
+        // only set this true for testing and remember to always clear your browser cache in development
+        dev: false
       }
     },
 
