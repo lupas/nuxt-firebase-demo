@@ -14,7 +14,7 @@
       "~/*": ["./*"],
       "@/*": ["./*"]
     },
-    "types": ["@types/node", "@nuxt/types", "vuetify"]
+    "types": ["@types/node", "@nuxt/types", "vuetify", "@nuxtjs/firebase"]
   },
   "exclude": ["node_modules", "functions"]
 }
