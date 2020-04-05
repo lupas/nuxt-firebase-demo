@@ -1393,10 +1393,10 @@
     eslint-plugin-unicorn "^16.0.0"
     eslint-plugin-vue "^6.1.2"
 
-"@nuxtjs/firebase@^5.0.1":
-  version "5.0.1"
-  resolved "https://registry.yarnpkg.com/@nuxtjs/firebase/-/firebase-5.0.1.tgz#35d8b109aaf8db2b741afb1dfa644b71f4b406eb"
-  integrity sha512-GoX+CX9FHYOZMZx9FUjqN3n0lbuL5rl/RSsUlagxrqer2ACb+v7gfCrrAwlDM64ib4oJM1CupKTvsCwtEj/bFA==
+"@nuxtjs/firebase@^5.0.2":
+  version "5.0.2"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/firebase/-/firebase-5.0.2.tgz#c39a229a66efb8125c0e850b415aad0f36ddd3dc"
+  integrity sha512-czIMdUBrdKKKBtidJ7oMa8J+uOygUJrF0Kw+4kxOs+ar6iiK4F9Y2ufkNBJp9c1DNBRwg4H7EDHW8Sm1uoXN2w==
   dependencies:
     consola "^2.11.3"
   optionalDependencies:
@@ -6598,7 +6598,7 @@ node-object-hash@^1.2.0:
   resolved "https://registry.yarnpkg.com/node-object-hash/-/node-object-hash-1.4.2.tgz#385833d85b229902b75826224f6077be969a9e94"
   integrity sha512-UdS4swXs85fCGWWf6t6DMGgpN/vnlKeSGEQ7hJcrs7PBFoxoKLmibc3QRb7fwiYsjdL7PX8iI/TMSlZ90dgHhQ==
 
-node-pre-gyp@*, node-pre-gyp@^0.14.0:
+node-pre-gyp@^0.14.0:
   version "0.14.0"
   resolved "https://registry.yarnpkg.com/node-pre-gyp/-/node-pre-gyp-0.14.0.tgz#9a0596533b877289bcad4e143982ca3d904ddc83"
   integrity sha512-+CvDC7ZttU/sSt9rFjix/P05iS43qHCOOGzcr3Ry99bXG7VX953+vFyEuph/tfqoYu8dttBkE86JSKBO2OzcxA==
