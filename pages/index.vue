@@ -68,6 +68,9 @@ export default Vue.extend({
     RemoteConfig,
     Messaging
   },
+  asyncData({app}) {
+    // INFO -> app.$fireStore etc. are accessible
+  },
   data: () => ({
     exampleComponents: [
       Auth,
