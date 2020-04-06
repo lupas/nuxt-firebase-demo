@@ -1424,10 +1424,10 @@
     eslint-plugin-unicorn "^16.0.0"
     eslint-plugin-vue "^6.1.2"
 
-"@nuxtjs/firebase@^5.0.2":
-  version "5.0.6"
-  resolved "https://registry.yarnpkg.com/@nuxtjs/firebase/-/firebase-5.0.6.tgz#c9d69da57b1ada4bf9574919019908a32e20aa0f"
-  integrity sha512-SkAXOsmK49XzNxdMjAui7XjRx7JIp4gPFyhZUf3FSdoXlqpvKVB6YUG2ovUOM8tJejrdVMceL42PZ1Mc9QKf8A==
+"@nuxtjs/firebase@^5.0.7":
+  version "5.0.7"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/firebase/-/firebase-5.0.7.tgz#35d2e109faff9587d0c073fe0d98c5196dc3cc8c"
+  integrity sha512-iNZVxMj0GDC6xbOPxnzmannrH38jAlkBaDbFyL4cFp1DMnILvCPoIn7H8HHk78woXm6UjAxbRg8ctkTB2K/JRA==
   dependencies:
     consola "^2.11.3"
   optionalDependencies:
@@ -7933,10 +7933,10 @@ prettier@^1.18.2:
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.19.1.tgz#f7d7f5ff8a9cd872a7be4ca142095956a60797cb"
   integrity sha512-s7PoyDv/II1ObgQunCbB9PdLmUcBZcnWOcxDh7O0N/UwDEsHyqkW+Qh28jW+mVuCdx7gLB0BotYI1Y6uI9iyew==
 
-prettier@^2.0.2:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.0.2.tgz#1ba8f3eb92231e769b7fcd7cb73ae1b6b74ade08"
-  integrity sha512-5xJQIPT8BraI7ZnaDwSbu5zLrB6vvi8hVV58yHQ+QK64qrY40dULy0HSRlQ2/2IdzeBpjhDkqdcFBnFeDEMVdg==
+prettier@^2.0.4:
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.0.4.tgz#2d1bae173e355996ee355ec9830a7a1ee05457ef"
+  integrity sha512-SVJIQ51spzFDvh4fIbCLvciiDMCrRhlN3mbZvv/+ycjvmF5E73bKdGfU8QDLNmjYJf+lsGnDBC4UUnvTe5OO0w==
 
 pretty-bytes@^5.3.0:
   version "5.3.0"
