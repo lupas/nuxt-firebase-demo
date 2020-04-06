@@ -21,6 +21,7 @@
     "startEmulators": "firebase --project nuxt-fire-demo emulators:start"
   },
   "dependencies": {
+    "@nuxt/typescript-runtime": "^0.4.0",
     "@nuxt/types": "^0.7.1",
     "@nuxtjs/firebase": "^5.0.2",
     "@nuxtjs/pwa": "^3.0.0-beta.20",
@@ -36,7 +37,6 @@
   },
   "devDependencies": {
     "@nuxt/typescript-build": "^0.6.0",
-    "@nuxt/typescript-runtime": "^0.4.0",
     "@nuxtjs/eslint-config-typescript": "^1.0.2",
     "@vue/eslint-config-prettier": "^6.0.0",
     "eslint-config-prettier": "^6.10.0",

@@ -9,6 +9,7 @@
     "sourceMap": true,
     "strict": true,
     "noEmit": true,
+    "experimentalDecorators": true,
     "baseUrl": ".",
     "paths": {
       "~/*": ["./*"],
@@ -16,5 +17,5 @@
     },
     "types": ["@types/node", "@nuxt/types", "vuetify", "@nuxtjs/firebase"]
   },
-  "exclude": ["node_modules", "functions"]
+  "exclude": ["node_modules", "functions", ".nuxt", "dist"]
 }
