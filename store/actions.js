@@ -34,7 +34,6 @@ export default {
   },
 
   onAuthStateChanged({ commit }, { authUser }) {
-    console.log("HIER", authUser)
     if (!authUser) {
       commit('RESET_STORE')
       return
