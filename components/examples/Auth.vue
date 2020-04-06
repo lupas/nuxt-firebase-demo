@@ -76,6 +76,10 @@ export default Vue.extend({
       isLoggedIn: 'isLoggedIn'
     })
   },
+  fetch() {
+    // INFO -> this.$fireAuth user etc. are accessible
+    // INFO -> this.$store.state.authUser is accessible even on server-side
+  },
   data: () => ({
     formData: {
       email: '',
