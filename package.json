@@ -23,7 +23,7 @@
   "dependencies": {
     "@nuxt/types": "^0.7.1",
     "@nuxt/typescript-runtime": "^0.4.0",
-    "@nuxtjs/firebase": "^5.0.7",
+    "@nuxtjs/firebase": "^5.2.0",
     "@nuxtjs/pwa": "^3.0.0-beta.20",
     "@nuxtjs/vuetify": "^1.11.0",
     "core-js": "^2.6.10",
