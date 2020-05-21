@@ -36,8 +36,8 @@
     "vue-github-buttons": "^3.1.0"
   },
   "devDependencies": {
-    "@nuxt/typescript-build": "^0.6.0",
-    "@nuxtjs/eslint-config-typescript": "^1.0.2",
+    "@nuxt/typescript-build": "^1.0.0",
+    "@nuxtjs/eslint-config-typescript": "^2.0.0",
     "@vue/eslint-config-prettier": "^6.0.0",
     "eslint-config-prettier": "^6.10.0",
     "eslint-plugin-prettier": "^3.1.2",
