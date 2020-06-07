@@ -1482,14 +1482,14 @@
     eslint-plugin-unicorn "^19.0.1"
     eslint-plugin-vue "^6.2.2"
 
-"@nuxtjs/firebase@^5.2.0":
-  version "5.2.0"
-  resolved "https://registry.yarnpkg.com/@nuxtjs/firebase/-/firebase-5.2.0.tgz#424c2196b2da288658148eb105dd152524d97f8d"
-  integrity sha512-utznHEJeoGej01YBgDbX5Elt1L/25aWj7O4aF/PzV7A1WCWi3sBLQDoqSdnIrDkyX/gr8xYrc/BOD024iwiAuA==
+"@nuxtjs/firebase@^6.0.0":
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/firebase/-/firebase-6.0.0.tgz#c06bc0b191b8036cd352da1bd376e9e135e130f0"
+  integrity sha512-wbk7btP8PDWRtteKnjz6PJuwVqpCrXl7BDjMg0BX883xpgFYbyjaUnz1MdGL9JqmPwJ5zD0JxLkhDRMxPOlTmg==
   dependencies:
-    consola "^2.11.3"
+    consola "^2.12.2"
   optionalDependencies:
-    firebase-admin "^8.11.0"
+    firebase-admin "^8.12.1"
 
 "@nuxtjs/pwa@^3.0.0-beta.20":
   version "3.0.0-beta.20"
@@ -4566,7 +4566,7 @@ find-up@^4.0.0, find-up@^4.1.0:
     locate-path "^5.0.0"
     path-exists "^4.0.0"
 
-firebase-admin@^8.10.0, firebase-admin@^8.11.0:
+firebase-admin@^8.10.0, firebase-admin@^8.12.1:
   version "8.12.1"
   resolved "https://registry.yarnpkg.com/firebase-admin/-/firebase-admin-8.12.1.tgz#a380c43a9e6ba37dfbe42211a253dd890a442063"
   integrity sha512-DZ4Q7QQJYaO2BhnhZLrhL+mGRTCLS5WrxjbJtuKGmbKRBepwMhx++EQA5yhnGnIXgDHnp5SrZnVKygNdXtH8BQ==

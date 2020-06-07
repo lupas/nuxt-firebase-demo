@@ -85,7 +85,10 @@ export default () => {
           },
           ssr: true
         },
-        firestore: true,
+        firestore: {
+          memoryOnly: false,
+          static: false,
+        },
         functions: {
           // emulatorPort: 12345
         },
@@ -103,7 +106,13 @@ export default () => {
           }
         },
         messaging: {
-          createServiceWorker: true
+          createServiceWorker: true,
+          actions: [
+            {
+              action: 'goToUrl',
+              url: "https://github.com/lupas"
+            }
+          ]
         }
       }
     },
@@ -118,6 +127,13 @@ export default () => {
         dev: process.env.NODE_ENV === 'development'
       }
     },
+
+    // Fixes issues with settinmg firestore.settings()
+    // render: {
+    //   bundleRenderer: {
+    //     runInNewContext: false
+    //   }
+    // },
 
     /*
      ** Build configuration
