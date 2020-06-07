@@ -11,7 +11,6 @@
           color="primary"
           outlined
           placeholder="Email"
-          :rules="formRules.email"
           type="email"
           autocomplete="username"
         ></v-text-field>
@@ -87,16 +86,11 @@ export default Vue.extend({
     },
     formValid: false,
     formRules: {
-      email: [
-        (v: string) => !!v || 'E-mail is required',
-        (v: string) => /.+@.+\..+/.test(v) || 'E-mail must be valid'
-      ],
       names: [
         (v: string) => !!v || 'Name is required',
         (v: string) =>
           (v && v.length <= 10) || 'Name must be less than 10 characters'
       ],
-      membershipUntil: [(v: string) => !!v || 'Required']
     }
   }),
   methods: {
