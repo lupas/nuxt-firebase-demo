@@ -89,9 +89,7 @@ export default () => {
           memoryOnly: false,
           static: false,
         },
-        functions: {
-          // emulatorPort: 12345
-        },
+
         storage: true,
         realtimeDb: true,
         performance: true,
