@@ -1,1 +1,1 @@
-web: nuxt start
+web: cd src && nuxt start
