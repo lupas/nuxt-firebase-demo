@@ -1,1 +1,1 @@
-web: cd src && nuxt start
+web: yarn start:heroku

@@ -1,0 +1,5 @@
+{
+  "scripts": {
+    "start:heroku": "cd src && yarn start"
+  }
+}
