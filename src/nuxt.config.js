@@ -2,13 +2,11 @@ const pkg = require('./package')
 
 export default () => {
   return {
-    mode: 'universal',
-
     /*
      ** Headers of the page
      */
     head: {
-      title: 'nuxt-fire | Demo',
+      title: 'nuxt-community/firebase | Demo',
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -89,7 +87,7 @@ export default () => {
           memoryOnly: false,
           static: false,
         },
-
+        functions: true,
         storage: true,
         realtimeDb: true,
         performance: true,
@@ -111,7 +109,7 @@ export default () => {
               url: "https://github.com/lupas"
             }
           ]
-        }
+        },
       }
     },
 
