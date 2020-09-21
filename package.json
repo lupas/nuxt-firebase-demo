@@ -1,5 +1,5 @@
 {
   "scripts": {
-    "start:heroku": "cd src && yarn start"
+    "start:heroku": "cd src && npm run start"
   }
 }

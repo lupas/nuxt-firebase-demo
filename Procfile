@@ -1,1 +1,1 @@
-web: yarn start:heroku
+web: npm run start:heroku
