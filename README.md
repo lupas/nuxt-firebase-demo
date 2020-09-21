@@ -26,8 +26,3 @@ $ npm run generate
 ```
 
 For detailed explanation on how things work, checkout [nuxt-fire](https://github.com/lupas/nuxt-fire).
-
-## Support on Beerpay
-Hey dude! Help me out for a couple of :beers:!
-
-[![Beerpay](https://beerpay.io/lupas/nuxt-fire-demo/badge.svg?style=beer-square)](https://beerpay.io/lupas/nuxt-fire-demo)  [![Beerpay](https://beerpay.io/lupas/nuxt-fire-demo/make-wish.svg?style=flat-square)](https://beerpay.io/lupas/nuxt-fire-demo?focus=wish)
