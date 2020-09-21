@@ -1,5 +1,48 @@
 {
+  "name": "nuxt-fire-demo",
+  "description": "Example project using nuxt-fire to integrate Firebase into a Nuxt project.",
+  "author": "Pascal Luther",
+  "license": "MIT",
+  "repository": "https://github.com/lupas/nuxt-fire-demo",
+  "homepage": "https://github.com/lupas",
+  "keywords": [
+    "nuxt",
+    "firebase"
+  ],
   "scripts": {
-    "start:heroku": "cd src && npm run start"
+    "dev": "nuxt-ts",
+    "build": "nuxt-ts build",
+    "generate": "nuxt-ts generate",
+    "start": "nuxt-ts start",
+    "heroku-postbuild": "yarn run build",
+    "deploy": "yarn run generate && firebase deploy --only hosting --project nuxt-fire-demo",
+    "i:firebase:local": "yarn remove @nuxtjs/firebase && yarn add ./../@nuxtjs-firebase",
+    "i:firebase": "yarn remove @nuxtjs/firebase && yarn add @nuxtjs/firebase",
+    "startEmulators": "firebase --project nuxt-fire-demo emulators:start"
+  },
+  "dependencies": {
+    "@nuxt/types": "^2.14.6",
+    "@nuxt/typescript-runtime": "^2.0.0",
+    "@nuxtjs/firebase": "^6.0.1",
+    "@nuxtjs/pwa": "^3.0.2",
+    "@nuxtjs/vuetify": "^1.11.0",
+    "core-js": "^2.6.11",
+    "cross-env": "^7.0.1",
+    "firebase": "^7.17.1",
+    "firebase-admin": "^9.2.0",
+    "jwt-decode": "^2.2.0",
+    "node-fetch": "^2.6.1",
+    "nuxt": "^2.14.6",
+    "vue-github-buttons": "^3.1.0"
+  },
+  "devDependencies": {
+    "@nuxt/typescript-build": "^2.0.3",
+    "@nuxtjs/eslint-config-typescript": "^3.0.0",
+    "@vue/eslint-config-prettier": "^6.0.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-vuetify": "^1.0.0-beta.6",
+    "nodemon": "^2.0.2",
+    "prettier": "^2.1.2"
   }
 }

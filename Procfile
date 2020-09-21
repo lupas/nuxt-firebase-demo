@@ -1,1 +1,1 @@
-web: npm run start:heroku
+web: nuxt start
