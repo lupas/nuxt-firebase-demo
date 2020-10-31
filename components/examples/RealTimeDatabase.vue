@@ -1,15 +1,13 @@
 <template>
   <div>
-    <h3 class="display-1 mb-5">
-      Firebase Realtime Database
-    </h3>
+    <ServiceTitle title="Firebase Realtime Database" />
     <div class="links">
-      <v-btn color="primary" outlined @click="writeToRealtimeDb()"
-        >Write to Realtime DB</v-btn
-      >
-      <pre>
+      <Btn @click="writeToRealtimeDb()">Write to Realtime DB</Btn>
+      <client-only>
+        <Codeblock>
+          <pre>
 async writeToRealtimeDb() {
-  const messageRef = this.$fireDb.ref('message')
+  const messageRef = this.$fire.database.ref('message')
   try {
     await messageRef.set({
       message: 'Nuxt-Fire with Firebase Realtime Database rocks!'
@@ -20,13 +18,15 @@ async writeToRealtimeDb() {
   }
   alert('Success.')
 }</pre
-      >
-      <v-btn color="primary" outlined @click="readFromRealtimeDb()"
-        >Read from Realtime DB</v-btn
-      >
-      <pre>
+          >
+        </Codeblock>
+      </client-only>
+      <Btn @click="readFromRealtimeDb()">Read from Realtime DB</Btn>
+      <client-only>
+        <Codeblock>
+          <pre>
 async readFromRealtimeDb() {
-  const messageRef = this.$fireDb.ref('message')
+  const messageRef = this.$fire.database.ref('message')
   try {
     const snapshot = await messageRef.once('value')
     alert(snapshot.val().message)
@@ -35,7 +35,9 @@ async readFromRealtimeDb() {
     return
   }
 }</pre
-      >
+          >
+        </Codeblock>
+      </client-only>
     </div>
   </div>
 </template>
@@ -46,10 +48,10 @@ import Vue from 'vue'
 export default Vue.extend({
   methods: {
     async writeToRealtimeDb() {
-      const messageRef = this.$fireDb.ref('message')
+      const messageRef = this.$fire.database.ref('message')
       try {
         await messageRef.set({
-          message: 'Nuxt-Fire with Firebase Realtime Database rocks!'
+          message: 'Nuxt-Fire with Firebase Realtime Database rocks!',
         })
       } catch (e) {
         alert(e)
@@ -58,15 +60,14 @@ export default Vue.extend({
       alert('Success.')
     },
     async readFromRealtimeDb() {
-      const messageRef = this.$fireDb.ref('message')
+      const messageRef = this.$fire.database.ref('message')
       try {
         const snapshot = await messageRef.once('value')
         alert(snapshot.val().message)
       } catch (e) {
         alert(e)
-        return
       }
-    }
-  }
+    },
+  },
 })
 </script>

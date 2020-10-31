@@ -1,13 +1,13 @@
 <template>
   <div>
-    <h3 class="display-1 mb-5">
-      Firebase Storage
-    </h3>
+    <ServiceTitle title="Firebase Storage" />
     <div class="links">
-      <v-btn color="primary" outlined @click="uploadFile()">Upload File</v-btn>
-      <pre>
+      <Btn @click="uploadFile()">Upload File</Btn>
+      <client-only>
+        <Codeblock>
+          <pre>
 async uploadFile() {
-  const storageRef = this.$fireStorage.ref().child('message.txt')
+  const storageRef = this.$fire.storage.ref().child('message.txt')
   const message = 'Nuxt-Fire with Firebase Storage rocks!'
   try {
     const snapshot = await storageRef.putString(message)
@@ -16,11 +16,16 @@ async uploadFile() {
     alert(e.message)
   }
 }
-      </pre>
-      <v-btn color="primary" outlined @click="getFileUrl()">Get File URL</v-btn>
-      <pre>
+      </pre
+          >
+        </Codeblock>
+      </client-only>
+      <Btn @click="getFileUrl()">Get File URL</Btn>
+      <client-only>
+        <Codeblock>
+          <pre>
 async getFileUrl() {
-  const storageRef = this.$fireStorage.ref().child('message.txt')
+  const storageRef = this.$fire.storage.ref().child('message.txt')
   try {
     const url = await storageRef.getDownloadURL()
     alert(`The file can be found here: ${url}`)
@@ -28,7 +33,10 @@ async getFileUrl() {
     alert(e.message)
   }
 }
-      </pre>
+      </pre
+          >
+        </Codeblock>
+      </client-only>
     </div>
   </div>
 </template>
@@ -39,7 +47,7 @@ import Vue from 'vue'
 export default Vue.extend({
   methods: {
     async uploadFile() {
-      const storageRef = this.$fireStorage.ref().child('message.txt')
+      const storageRef = this.$fire.storage.ref().child('message.txt')
       const message = 'Nuxt-Fire with Firebase Storage rocks!'
       try {
         const snapshot = await storageRef.putString(message)
@@ -49,14 +57,14 @@ export default Vue.extend({
       }
     },
     async getFileUrl() {
-      const storageRef = this.$fireStorage.ref().child('message.txt')
+      const storageRef = this.$fire.storage.ref().child('message.txt')
       try {
         const url = await storageRef.getDownloadURL()
         alert(`The file can be found here: ${url}`)
       } catch (e) {
         alert(e.message)
       }
-    }
-  }
+    },
+  },
 })
 </script>

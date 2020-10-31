@@ -19,7 +19,7 @@
     }
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 	.st10{fill:#00C58E;}
 	.st11{fill:#2F495E;}
 	.st12{fill:#108775;}

@@ -1,14 +1,9 @@
 <template>
-  <v-app>
-    <v-main>
-      <nuxt />
-    </v-main>
-  </v-app>
+  <div class="container py-8">
+    <main class="max-w-full">
+      <Nuxt />
+    </main>
+  </div>
 </template>
 
-<script lang="ts">
-import Vue from 'vue'
-
-export default Vue.extend({})
-</script>
 <style></style>

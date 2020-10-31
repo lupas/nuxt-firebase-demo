@@ -1,37 +1,30 @@
 <template>
-  <v-row>
-    <v-col cols="12" class="links">
-      <h3 class="display-1 mb-5">Firebase Messaging</h3>
-      <v-btn
-        :disabled="listenersStarted"
-        color="primary"
-        outlined
-        @click="startListeners"
-      >Start Listeners</v-btn>
-      <v-btn
+  <div>
+    <div>
+      <ServiceTitle title="Firebase Messaging" />
+      <Btn :disabled="listenersStarted" @click="startListeners"
+        >Start Listeners</Btn
+      >
+      <Btn
         :disabled="permissionGranted || !listenersStarted"
-        color="primary"
-        outlined
+        class="mb-1"
         @click="requestPermission"
-      >Request Permission</v-btn>
-      <v-btn
+      >
+        Request Permission
+      </Btn>
+      <Btn
         :disabled="!listenersStarted || !permissionGranted || idToken !== ''"
-        color="primary"
-        outlined
+        :loading="loading"
+        class="mb-1"
         @click="getIdToken"
-      >Get ID Token</v-btn>
-      <v-btn
-        :disabled="idToken === ''"
-        color="primary"
-        outlined
-        @click="sendTestMessage"
-      >Send Test Push Message</v-btn>
-    </v-col>
-    <v-col cols="12">
-      <p>ID Token:</p>
-      {{ idToken }}
-    </v-col>
-  </v-row>
+      >
+        Get ID Token
+      </Btn>
+      <Btn :disabled="idToken === ''" class="mb-1" @click="sendTestMessage">
+        Send Test Push Message
+      </Btn>
+    </div>
+  </div>
 </template>
 
 <script lang="ts">
@@ -43,6 +36,7 @@ export default Vue.extend({
       listenersStarted: false,
       permissionGranted: false,
       idToken: '',
+      loading: false,
     }
   },
   methods: {
@@ -52,16 +46,17 @@ export default Vue.extend({
         this.permissionGranted = permission === 'granted'
       } catch (e) {
         console.error(e)
-        return
       }
     },
     async getIdToken() {
+      this.loading = true
       let currentToken
       try {
-        currentToken = await this.$fireMess.getToken()
+        currentToken = await this.$fire.messaging.getToken()
       } catch (e) {
         console.error('An error occurred while retrieving token. ', e)
         this.idToken = ''
+        this.loading = false
       }
 
       if (currentToken) {
@@ -72,9 +67,11 @@ export default Vue.extend({
           'No Instance ID token available. Request permission to generate one.'
         )
         // Show permission UI.
-        //updateUIForPushPermissionRequired();
+        // updateUIForPushPermissionRequired();
         this.idToken = ''
       }
+      alert(`The id token is: ${this.idToken}`)
+      this.loading = false
     },
     startListeners() {
       this.startOnMessageListener()
@@ -82,14 +79,14 @@ export default Vue.extend({
       this.listenersStarted = true
     },
     startOnMessageListener() {
-      this.$fireMess.onMessage((payload) => {
+      this.$fire.messaging.onMessage((payload) => {
         console.info('Message received. ', payload)
       })
     },
     startTokenRefreshListener() {
-      this.$fireMess.onTokenRefresh(async () => {
+      this.$fire.messaging.onTokenRefresh(async () => {
         try {
-          const refreshedToken = await this.$fireMess.getToken()
+          const refreshedToken = await this.$fire.messaging.getToken()
           this.idToken = refreshedToken
         } catch (e) {
           console.error('Unable to retrieve refreshed token ', e)
@@ -100,13 +97,12 @@ export default Vue.extend({
       try {
         setTimeout(() => {
           // wait 5 seconds so you have time to switch away from the page to test the service-worker
-          this.$fireFunc.httpsCallable('sendTestPushMessage')({
+          this.$fire.functions.httpsCallable('sendTestPushMessage')({
             token: this.idToken,
           })
         }, 5000)
       } catch (e) {
         alert(e)
-        return
       }
     },
   },

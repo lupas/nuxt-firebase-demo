@@ -1,15 +1,13 @@
 <template>
   <div>
-    <h3 class="display-1 mb-5">
-      Firebase Firestore
-    </h3>
+    <ServiceTitle title="Firebase Firestore" />
     <div class="links">
-      <v-btn color="primary" outlined @click="writeToFirestore()"
-        >Write to Firestore</v-btn
-      >
-      <pre>
+      <Btn @click="writeToFirestore()">Write to Firestore</Btn>
+      <client-only>
+        <Codeblock>
+          <pre>
 async writeToFirestore() {
-  const messageRef = this.$fireStore.collection('message').doc('message')
+  const messageRef = this.$fire.firestore.collection('message').doc('message')
   try {
     await messageRef.set({
       message: 'Nuxt-Fire with Firestore rocks!'
@@ -20,13 +18,16 @@ async writeToFirestore() {
   }
   alert('Success.')
 }
-      </pre>
-      <v-btn color="primary" outlined @click="readFromFirestore()"
-        >Read from Firestore</v-btn
-      >
-      <pre>
+      </pre
+          >
+        </Codeblock>
+      </client-only>
+      <Btn @click="readFromFirestore()">Read from Firestore</Btn>
+      <client-only>
+        <Codeblock>
+          <pre>
 async readFromFirestore() {
-  const messageRef = this.$fireStore.collection('message').doc('message')
+  const messageRef = this.$fire.firestore.collection('message').doc('message')
   try {
     const messageDoc = await messageRef.get()
     alert(messageDoc.data().message)
@@ -35,7 +36,9 @@ async readFromFirestore() {
   return
   }
 }</pre
-      >
+          >
+        </Codeblock>
+      </client-only>
     </div>
   </div>
 </template>
@@ -46,10 +49,12 @@ import Vue from 'vue'
 export default Vue.extend({
   methods: {
     async writeToFirestore() {
-      const messageRef = this.$fireStore.collection('message').doc('message')
+      const messageRef = this.$fire.firestore
+        .collection('message')
+        .doc('message')
       try {
         await messageRef.set({
-          message: 'Nuxt-Fire with Firestore rocks!'
+          message: 'Nuxt-Fire with Firestore rocks!',
         })
       } catch (e) {
         alert(e)
@@ -58,7 +63,9 @@ export default Vue.extend({
       alert('Success.')
     },
     async readFromFirestore() {
-      const messageRef = this.$fireStore.collection('message').doc('message')
+      const messageRef = this.$fire.firestore
+        .collection('message')
+        .doc('message')
       try {
         const snapshot = await messageRef.get()
         const doc = snapshot.data()
@@ -69,9 +76,8 @@ export default Vue.extend({
         alert(doc.message)
       } catch (e) {
         alert(e)
-        return
       }
-    }
-  }
+    },
+  },
 })
 </script>

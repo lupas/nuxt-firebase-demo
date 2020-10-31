@@ -1,27 +1,27 @@
 <template>
   <div>
-    <h3 class="display-1 mb-5">
-      Firebase RemoteConfig
-    </h3>
+    <ServiceTitle title="Firebase RemoteConfig" />
     <div class="links">
-      <v-btn color="primary" outlined @click="readRemoteConfig()"
-        >Reads Remote Config</v-btn
-      >
-      <pre>
+      <Btn @click="readRemoteConfig()">Reads Remote Config</Btn>
+      <client-only>
+        <Codeblock>
+          <pre>
 async readRemoteConfig() {
   try {
-    await this.$fireConfig.fetchAndActivate();
+    await this.$fire.remoteConfig.fetchAndActivate();
   } catch (e) {
   alert(e);
   return;
   }
-  const exampleMessage = await this.$fireConfig.getValue("exampleMessage");
+  const exampleMessage = await this.$fire.remoteConfig.getValue("exampleMessage");
   alert(
   `Success. Read RemoteConfig parameter 'exampleMessage' is: ${exampleMessage._value}`
   );
 }
 </pre
-      >
+          >
+        </Codeblock>
+      </client-only>
     </div>
   </div>
 </template>
@@ -33,19 +33,19 @@ export default Vue.extend({
   methods: {
     async readRemoteConfig() {
       try {
-        await this.$fireConfig.fetchAndActivate()
+        await this.$fire.remoteConfig.fetchAndActivate()
       } catch (e) {
         alert(e)
         return
       }
-      console.info(this.$fireConfig)
-      const exampleMessage: any = await this.$fireConfig.getValue(
+      console.info(this.$fire.remoteConfig)
+      const exampleMessage: any = await this.$fire.remoteConfig.getValue(
         'exampleMessage'
       )
       alert(
         `Success. Read RemoteConfig parameter 'exampleMessage' is: ${exampleMessage._value}`
       )
-    }
-  }
+    },
+  },
 })
 </script>

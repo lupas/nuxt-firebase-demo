@@ -1,64 +1,52 @@
 <template>
   <div>
-    <h3 class="display-1 mb-5">
-      Firebase Authentication
-    </h3>
-    <div class="links">
-      <v-form v-if="!isLoggedIn" v-model="formValid">
-        <h5>SignUp / LogIn</h5>
-        <v-text-field
+    <ServiceTitle title="Firebase Authentication" />
+    <SubTitle title="SignUp / LogIn" />
+    <Form v-if="!isLoggedIn">
+      <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
+          Email
+        </label>
+        <input
           v-model="formData.email"
-          color="primary"
-          outlined
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
           placeholder="Email"
           type="email"
           autocomplete="username"
-        ></v-text-field>
-        <v-text-field
+        />
+      </div>
+      <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
+          Password
+        </label>
+        <input
           v-model="formData.password"
-          :rules="formRules.password"
-          color="primary"
-          outlined
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
           placeholder="Password"
           type="password"
           autocomplete="current-password"
-        ></v-text-field>
-        <v-btn
-          :disabled="!formValid"
-          color="primary"
-          outlined
-          @click="createUser()"
-          >Register</v-btn
-        >
-        <v-btn
-          :disabled="!formValid"
-          color="primary"
-          outlined
-          @click="signInUser()"
-          >Sign In</v-btn
-        >
-      </v-form>
-      <div v-else>
-        <p>You are logged in with {{ authUser.email }}.</p>
-        <v-btn color="primary" outlined @click="logout">Logout</v-btn>
+        />
       </div>
-      <pre>
-async createUser() {
-  try {
-    await this.$fireAuth.createUserWithEmailAndPassword(
-      'foo@foo.foo',
-      'test'
-    )
-  } catch (e) {
-    alert(e)
-  }
-}</pre
-      >
-      <p class="mt-1">
-        This will throw a password error coming from Firebase, but proves the
-        point.
-      </p>
+      <Btn @click="createUser">Register</Btn>
+      <Btn @click="signInUser">Sign In</Btn>
+    </Form>
+    <div v-else>
+      <p>You are logged in with {{ authUser.email }}.</p>
+      <Btn color="primary" outlined @click="logout">Logout</Btn>
     </div>
+    <client-only>
+      <Codeblock>
+        <pre>
+async createUser() {
+  try { 
+    await this.$fire.auth.createUserWithEmailAndPassword('foo@foo.foo', 'test')
+  } catch (e) { 
+    alert(e) 
+  }
+}
+        </pre>
+      </Codeblock>
+    </client-only>
   </div>
 </template>
 
@@ -69,34 +57,26 @@ import { mapState, mapGetters } from 'vuex'
 export default Vue.extend({
   computed: {
     ...mapState({
-      authUser: (state: any) => state.authUser
+      authUser: (state: any) => state.authUser,
     }),
     ...mapGetters({
-      isLoggedIn: 'isLoggedIn'
-    })
+      isLoggedIn: 'isLoggedIn',
+    }),
   },
-  fetch() {
-    // INFO -> this.$fireAuth user etc. are accessible
-    // INFO -> this.$store.state.authUser is accessible even on server-side
-  },
+  // fetch() {
+  //   // INFO -> this.$fire.auth user etc. are accessible
+  //   // INFO -> this.$store.state.authUser is accessible even on server-side
+  // },
   data: () => ({
     formData: {
       email: '',
-      password: ''
+      password: '',
     },
-    formValid: false,
-    formRules: {
-      names: [
-        (v: string) => !!v || 'Name is required',
-        (v: string) =>
-          (v && v.length <= 10) || 'Name must be less than 10 characters'
-      ],
-    }
   }),
   methods: {
     async createUser() {
       try {
-        await this.$fireAuth.createUserWithEmailAndPassword(
+        await this.$fire.auth.createUserWithEmailAndPassword(
           this.formData.email,
           this.formData.password
         )
@@ -106,7 +86,7 @@ export default Vue.extend({
     },
     async signInUser() {
       try {
-        await this.$fireAuth.signInWithEmailAndPassword(
+        await this.$fire.auth.signInWithEmailAndPassword(
           this.formData.email,
           this.formData.password
         )
@@ -116,11 +96,11 @@ export default Vue.extend({
     },
     async logout() {
       try {
-        await this.$fireAuth.signOut()
+        await this.$fire.auth.signOut()
       } catch (e) {
         alert(e)
       }
-    }
-  }
+    },
+  },
 })
 </script>

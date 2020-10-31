@@ -1,12 +1,10 @@
 <template>
   <div>
-    <h3 class="display-1 mb-5">
-      Firebase Performance
-    </h3>
+    <ServiceTitle title="Firebase Performance" />
     <div class="links">
-      <v-btn color="primary" outlined @click="checkPerformance()">{{
+      <Btn @click="checkPerformance()">{{
         traceStarted ? 'In Progress' : 'Start Trace'
-      }}</v-btn>
+      }}</Btn>
     </div>
   </div>
 </template>
@@ -17,17 +15,17 @@ import Vue from 'vue'
 export default Vue.extend({
   data() {
     return {
-      traceStarted: false
+      traceStarted: false,
     }
   },
   methods: {
-    async checkPerformance() {
-      const trace = this.$firePerf.trace('testTrace')
+    checkPerformance() {
+      const trace = this.$fire.performance.trace('testTrace')
       trace.start()
       this.traceStarted = true
       console.info('Firebase Performance Trace Start')
       const ctx = this
-      setTimeout(function() {
+      setTimeout(function () {
         for (let step = 0; step < 100; step++) {
           // Runs x times
         }
@@ -35,7 +33,7 @@ export default Vue.extend({
         console.info('Firebase Performance Trace Stop')
         ctx.traceStarted = false
       }, 2000)
-    }
-  }
+    },
+  },
 })
 </script>

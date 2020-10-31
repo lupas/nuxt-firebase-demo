@@ -1,24 +1,26 @@
 <template>
   <div>
-    <h3 class="display-1 mb-5">
-      Firebase Functions
-    </h3>
+    <ServiceTitle title="Firebase Functions" />
     <div class="links">
-      <v-btn color="primary" outlined @click="callTestFunction()"
-        >Call Test Function</v-btn
+      <Btn :loading="loading" @click="callTestFunction()"
+        >Call Test Function</Btn
       >
       <p class="mt-1">Might take some seconds.</p>
-      <pre>
+      <client-only>
+        <Codeblock>
+          <pre>
 async callTestFunction() {
   try {
-    const res = await this.$fireFunc.httpsCallable('testFunction')()
+    const res = await this.$fire.functions.httpsCallable('testFunction')()
     alert(res.data)
   } catch (e) {
     alert(e)
     return
   }
 }</pre
-      >
+          >
+        </Codeblock>
+      </client-only>
     </div>
   </div>
 </template>
@@ -27,16 +29,21 @@ async callTestFunction() {
 import Vue from 'vue'
 
 export default Vue.extend({
+  data: () => ({
+    loading: false,
+  }),
   methods: {
     async callTestFunction() {
+      this.loading = true
       try {
-        const res = await this.$fireFunc.httpsCallable('testFunction')()
+        const res = await this.$fire.functions.httpsCallable('testFunction')()
         alert(res.data.message)
       } catch (e) {
         alert(e)
-        return
+      } finally {
+        this.loading = false
       }
-    }
-  }
+    },
+  },
 })
 </script>

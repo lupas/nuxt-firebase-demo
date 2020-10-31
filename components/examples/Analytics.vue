@@ -1,19 +1,22 @@
 <template>
   <div>
-    <h3 class="display-1 mb-5">
-      Firebase Analytics
-    </h3>
+    <ServiceTitle title="Firebase Analytics" />
     <div class="links">
-      <v-btn color="primary" outlined @click="logEvent()">Log Event</v-btn>
-      <pre>
+      <Btn @click="logEvent()">Log Event</Btn>
+      <client-only>
+        <Codeblock>
+          <pre>
 async logEvent() {
   try {
-    await this.$fireAnalytics.logEvent('analytics_button_clicked')
+    await this.$fire.analytics.logEvent('analytics_button_clicked')
   } catch (e) {
     alert(e)
   }
-}</pre
-      >
+}
+    </pre
+          >
+        </Codeblock>
+      </client-only>
       <p class="mt-1">This will log an event in Firebase Analytics.</p>
     </div>
   </div>
@@ -26,12 +29,12 @@ export default Vue.extend({
   methods: {
     async logEvent() {
       try {
-        await this.$fireAnalytics.logEvent('analytics_button_clicked')
+        await this.$fire.analytics.logEvent('analytics_button_clicked')
         alert("Event 'analytics_button_clicked' logged to Google Analytics")
       } catch (e) {
         alert(e)
       }
-    }
-  }
+    },
+  },
 })
 </script>

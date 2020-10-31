@@ -1,27 +1,11 @@
-node_modules/**/*
-.vscode
-.nuxt
-dist
-*cache
-.firebase
-
+# Created by .ignore support plugin (hsz.mobi)
+### Node template
 # Logs
-logs
+/logs
 *.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-firebase-debug.log*
-
-# Firebase cache
-.firebase/
-
-# Firebase config
-
-# Uncomment this if you'd like others to create their own Firebase project.
-# For a team working on the same Firebase project(s), it is recommended to leave
-# it commented so all members can deploy to the same project(s) in .firebaserc.
-# .firebaserc
 
 # Runtime data
 pids
@@ -47,11 +31,15 @@ bower_components
 # node-waf configuration
 .lock-wscript
 
-# Compiled binary addons (http://nodejs.org/api/addons.html)
+# Compiled binary addons (https://nodejs.org/api/addons.html)
 build/Release
 
 # Dependency directories
 node_modules/
+jspm_packages/
+
+# TypeScript v1 declaration files
+typings/
 
 # Optional npm cache directory
 .npm
@@ -71,9 +59,37 @@ node_modules/
 # dotenv environment variables file
 .env
 
-serviceAccountKey.json
+# parcel-bundler cache (https://parceljs.org/)
+.cache
 
-# Service Workers
+# next.js build output
+.next
+
+# nuxt.js build output
+.nuxt
+
+# Nuxt generate
+dist
+
+# vuepress build output
+.vuepress/dist
+
+# Serverless directories
+.serverless
+
+# IDE / Editor
+.idea
+
+# Service worker
+sw.*
+
+# macOS
+.DS_Store
+
+# Vim swap files
+*.swp
+
+# Service Workers
 firebase-auth-sw.js
 firebase-messaging-sw.js
 sw.js
