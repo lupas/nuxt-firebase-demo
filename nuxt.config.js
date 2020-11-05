@@ -60,11 +60,11 @@ export default {
         createServiceWorker: true,
         actions: [
           {
-            action: 'goToUrl',
+            action: 'goToLupasGithub',
             url: 'https://github.com/lupas',
           },
           {
-            action: 'goToUrl',
+            action: 'goToModuleGithub',
             url: 'https://github.com/nuxt-community/firebase-module',
           },
         ],

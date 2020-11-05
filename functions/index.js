@@ -28,12 +28,12 @@ exports.sendTestPushMessage = functions.https.onCall(async (data) => {
         // Adds actions to the push notification
         actions: [
           {
-            action: 'goToUrl',
+            action: 'goToLupasGithub',
             title: 'Github: lupas',
             icon: '',
           },
           {
-            action: 'goToUrl',
+            action: 'goToModuleGithub',
             title: 'Firebase Module',
             icon: '',
           },
