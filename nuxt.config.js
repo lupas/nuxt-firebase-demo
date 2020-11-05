@@ -41,10 +41,15 @@ export default {
       },
       firestore: {
         memoryOnly: false,
+        emulatorPort: 8080,
       },
-      functions: true,
+      functions: {
+        emulatorPort: 12345,
+      },
       storage: true,
-      database: true,
+      database: {
+        emulatorPort: 9000,
+      },
       performance: true,
       analytics: true,
       remoteConfig: {
