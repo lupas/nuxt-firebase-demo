@@ -63,6 +63,10 @@ export default {
             action: 'goToUrl',
             url: 'https://github.com/lupas',
           },
+          {
+            action: 'goToUrl',
+            url: 'https://github.com/nuxt-community/firebase-module',
+          },
         ],
       },
     },

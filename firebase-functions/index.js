@@ -10,44 +10,45 @@ exports.testFunction = functions.https.onCall(() => {
 
 exports.sendTestPushMessage = functions.https.onCall(async (data) => {
   // As defined in https://firebase.google.com/docs/reference/fcm/rest/v1/projects.messages
-  const image = "https://avatars2.githubusercontent.com/u/4020037?s=460&u=c5f9c131d565202d8e530295b130239edd25768d&v=4"
+  const image =
+    'https://avatars2.githubusercontent.com/u/4020037?s=460&u=c5f9c131d565202d8e530295b130239edd25768d&v=4'
   const message = {
-    "name": "testPushMessage",
-    "data": {
+    name: 'testPushMessage',
+    data: {},
+    notification: {
+      title: `Test Push Message`,
+      body: 'If you get this, it worked.',
+      image,
     },
-    "notification": {
-      "title": `Test Push Message`,
-      "body": "If you get this, it worked.",
-      image
-    },
-    "android": {
-
-    },
-    "webpush": {
-      "notification": {
+    android: {},
+    webpush: {
+      notification: {
         // Adds the image to the push notificationm
-        "icon": image,
+        icon: image,
         // Adds actions to the push notification
-        "actions": [
+        actions: [
           {
-            action: "goToUrl",
-            title: "Github: lupas",
-            icon: ""
-          }
-        ]
+            action: 'goToUrl',
+            title: 'Github: lupas',
+            icon: '',
+          },
+          {
+            action: 'goToUrl',
+            title: 'Firebase Module',
+            icon: '',
+          },
+        ],
       },
-      "fcm_options": {
+      fcm_options: {
         // Adds a link to be opened when clicked on the push notification
-        "link": "https://nuxt-fire-demo.herokuapp.com/"
-      }
+        link: 'https://nuxt-fire-demo.herokuapp.com/',
+      },
     },
-    "apns": {
-      "fcm_options": {
-      }
+    apns: {
+      fcm_options: {},
     },
-    "fcm_options": {
-    },
-    token: data.token
+    fcm_options: {},
+    token: data.token,
   }
   try {
     await messaging.send(message)
