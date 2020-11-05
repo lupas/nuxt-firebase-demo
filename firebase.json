@@ -16,6 +16,18 @@
   "emulators": {
     "functions": {
       "port": 12345
+    },
+    "firestore": {
+      "port": 8080
+    },
+    "database": {
+      "port": 9000
+    },
+    "hosting": {
+      "port": 5000
+    },
+    "ui": {
+      "enabled": true
     }
   }
 }
