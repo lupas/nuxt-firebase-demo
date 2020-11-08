@@ -41,14 +41,14 @@ export default {
       },
       firestore: {
         memoryOnly: false,
-        emulatorPort: 8080,
+        emulatorPort: process.env.NODE_ENV === 'development' ? 8080 : false,
       },
       functions: {
-        emulatorPort: 12345,
+        emulatorPort: process.env.NODE_ENV === 'development' ? 12345 : false,
       },
       storage: true,
       database: {
-        emulatorPort: 9000,
+        emulatorPort: process.env.NODE_ENV === 'development' ? 9000 : false,
       },
       performance: true,
       analytics: true,
