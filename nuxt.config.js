@@ -60,6 +60,7 @@ export default {
           onAuthStateChangedAction: 'onAuthStateChanged',
         },
         ssr: true,
+        emulatorPort: process.env.NODE_ENV === 'development' ? 9099 : false,
       },
       firestore: {
         memoryOnly: false,
