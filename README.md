@@ -6,7 +6,7 @@
 
 ## Demo
 
-### [Live Demo](https://nuxt-fire-demo.firebaseapp.com)
+### [Live Demo](https://nuxt-fire-demo.herokuapp.com)
 
 ## Build Setup
 
