@@ -17,6 +17,9 @@ $ cd src
 # install dependencies
 $ yarn
 
+# start firebase emulators
+$ yarn emulators
+
 # serve with hot reload at localhost:3000
 $ yarn dev
 ```
