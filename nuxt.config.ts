@@ -52,8 +52,6 @@ const config: NuxtConfig = {
       messagingSenderId: '807370470428',
       appId: '1:807370470428:web:26da98c86c3fd352',
       measurementId: 'G-XT6PVC1D4X',
-      fcmPublicVapidKey:
-        'BL_xoiuOe5vbb2vJkCNnuswn03NwCsyCkJUgRbuQA5tpg7J4E4z50MO8b-wrrad6fcysYAaFjHqU7D9o0oCWL8w',
     },
     onFirebaseHosting: false,
     services: {
@@ -99,6 +97,8 @@ const config: NuxtConfig = {
             url: 'https://github.com/nuxt-community/firebase-module',
           },
         ],
+        fcmPublicVapidKey:
+          'BL_xoiuOe5vbb2vJkCNnuswn03NwCsyCkJUgRbuQA5tpg7J4E4z50MO8b-wrrad6fcysYAaFjHqU7D9o0oCWL8w',
       },
     },
   },
