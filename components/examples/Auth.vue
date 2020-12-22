@@ -2,7 +2,7 @@
   <div>
     <ServiceTitle title="Firebase Authentication" />
     <SubTitle title="SignUp / LogIn" />
-    <form v-if="!isLoggedIn">
+    <form v-if="!isLoggedIn" onsubmit="return false;">
       <div class="mb-4">
         <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
           Email
