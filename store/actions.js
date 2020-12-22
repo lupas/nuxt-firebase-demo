@@ -2,7 +2,7 @@ export default {
   async nuxtServerInit({ dispatch }, ctx) {
     // INFO -> Nuxt-fire Objects can be accessed in nuxtServerInit action via this.$fire___, ctx.$fire___ and ctx.app.$fire___'
 
-    /** Get the VERIFIED authUser from the server */
+    /** Get the VERIFIED authUser on the server */
     if (ctx.res && ctx.res.locals && ctx.res.locals.user) {
       const { allClaims: claims, ...authUser } = ctx.res.locals.user
 
@@ -25,7 +25,7 @@ export default {
       commit('RESET_STORE')
       return
     }
-    if (authUser) {
+    if (authUser && authUser.getIdToken) {
       try {
         const idToken = await authUser.getIdToken(true)
         console.info('idToken', idToken)
