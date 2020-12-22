@@ -2,7 +2,7 @@
   <div>
     <ServiceTitle title="Firebase Authentication" />
     <SubTitle title="SignUp / LogIn" />
-    <Form v-if="!isLoggedIn">
+    <form v-if="!isLoggedIn">
       <div class="mb-4">
         <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
           Email
@@ -29,7 +29,7 @@
       </div>
       <Btn @click="createUser">Register</Btn>
       <Btn @click="signInUser">Sign In</Btn>
-    </Form>
+    </form>
     <div v-else>
       <p>You are logged in with {{ authUser.email }}.</p>
       <Btn color="primary" outlined @click="logout">Logout</Btn>
