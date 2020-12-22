@@ -61,6 +61,7 @@ const config: NuxtConfig = {
         },
         ssr: true,
         emulatorPort: process.env.NODE_ENV === 'development' ? 9099 : undefined,
+        disableEmulatorWarnings: false,
       },
       firestore: {
         memoryOnly: false,
