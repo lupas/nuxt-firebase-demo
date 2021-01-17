@@ -20,7 +20,7 @@
     "firebase-admin": "^9.4.2",
     "nuxt": "^2.14.12",
     "prismjs": "^1.22.0",
-    "vue-prism-component": "^1.2.0"
+    "vue-prism-component": "^2.0.0"
   },
   "devDependencies": {
     "@nuxt/types": "^2.14.12",
