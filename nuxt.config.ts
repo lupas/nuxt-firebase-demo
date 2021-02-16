@@ -1,5 +1,8 @@
 import { NuxtConfig } from '@nuxt/types'
 
+const isDev = process.env.NODE_ENV === 'development'
+const useEmulators = false // manually change if emulators needed
+
 const config: NuxtConfig = {
   head: {
     title: 'nuxt-firebase-demo',
@@ -60,20 +63,19 @@ const config: NuxtConfig = {
           onAuthStateChangedAction: 'onAuthStateChanged',
         },
         ssr: true,
-        // emulatorPort: process.env.NODE_ENV === 'development' ? 9099 : undefined,
+        // emulatorPort: isDev ? 9099 : undefined,
         disableEmulatorWarnings: false,
       },
       firestore: {
         memoryOnly: false,
-        emulatorPort: process.env.NODE_ENV === 'development' ? 8080 : undefined,
+        emulatorPort: isDev && useEmulators ? 8080 : undefined,
       },
       functions: {
-        emulatorPort:
-          process.env.NODE_ENV === 'development' ? 12345 : undefined,
+        emulatorPort: isDev && useEmulators ? 12345 : undefined,
       },
       storage: true,
       database: {
-        emulatorPort: process.env.NODE_ENV === 'development' ? 9000 : undefined,
+        emulatorPort: isDev && useEmulators ? 9000 : undefined,
       },
       performance: true,
       analytics: true,
