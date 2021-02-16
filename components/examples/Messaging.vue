@@ -24,10 +24,6 @@
       <Btn :disabled="idToken === ''" class="mb-1" @click="sendTestMessage">
         Send Test Push Message
       </Btn>
-      <p>
-        Info: Sending messages does currently not work when using the Functions
-        emulator.
-      </p>
     </div>
   </div>
 </template>

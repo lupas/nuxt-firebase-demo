@@ -10,7 +10,7 @@
     "emulate": "firebase emulators:start --only functions"
   },
   "engines": {
-    "node": "10"
+    "node": "12"
   },
   "dependencies": {
     "firebase-admin": "^9.3.0",
