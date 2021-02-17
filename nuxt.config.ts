@@ -63,7 +63,7 @@ const config: NuxtConfig = {
           onAuthStateChangedAction: 'onAuthStateChanged',
         },
         ssr: true,
-        // emulatorPort: isDev ? 9099 : undefined,
+        emulatorPort: isDev && useEmulators ? 9099 : undefined,
         disableEmulatorWarnings: false,
       },
       firestore: {
