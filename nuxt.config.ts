@@ -14,28 +14,6 @@ const config: NuxtConfig = {
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
 
-  hooks: {
-    generate: {
-      async done(builder: any) {
-        // This makes sure nuxt generate does finish without running into a timeout issue.
-        // See https://github.com/nuxt-community/firebase-module/issues/93
-        const appModule = await import('./.nuxt/firebase/app.js')
-        const { session } = await appModule.default(
-          builder.options.firebase.config,
-          {
-            res: null,
-          }
-        )
-        try {
-          session.database().goOffline()
-        } catch (e) {}
-        try {
-          session.firestore().terminate()
-        } catch (e) {}
-      },
-    },
-  },
-
   components: true,
 
   buildModules: [
@@ -49,7 +27,6 @@ const config: NuxtConfig = {
     config: {
       apiKey: 'AIzaSyDa-YwgWTp2GDyVYEfv-XLb62100_HoEvU',
       authDomain: 'nuxt-fire-demo.firebaseapp.com',
-      databaseURL: 'https://nuxt-fire-demo.firebaseio.com',
       projectId: 'nuxt-fire-demo',
       storageBucket: 'nuxt-fire-demo.appspot.com',
       messagingSenderId: '807370470428',
@@ -57,6 +34,7 @@ const config: NuxtConfig = {
       measurementId: 'G-XT6PVC1D4X',
     },
     onFirebaseHosting: false,
+    terminateDatabasesAfterGenerate: true,
     services: {
       auth: {
         initialize: {
@@ -68,6 +46,7 @@ const config: NuxtConfig = {
       },
       firestore: {
         memoryOnly: false,
+        enablePersistence: true,
         emulatorPort: isDev && useEmulators ? 8080 : undefined,
       },
       functions: {

@@ -1644,14 +1644,14 @@
     consola "^2.15.0"
     eslint-webpack-plugin "^2.4.1"
 
-"@nuxtjs/firebase@^7.3.0":
-  version "7.4.1"
-  resolved "https://registry.yarnpkg.com/@nuxtjs/firebase/-/firebase-7.4.1.tgz#b654ab7a022d43da9e9f492eb142728cfa3fe61f"
-  integrity sha512-u8H+0uRYQYDIG9XX6CTvz7lynB58kBjmBfrwgVpGZPqjMI+u/XvKTq9RZWGp5c3P1142UpIluWiVBUrESNmT6g==
+"@nuxtjs/firebase@^7.5.0":
+  version "7.5.0"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/firebase/-/firebase-7.5.0.tgz#af5df20d2b2eae61ca938ea47ff03a0237b2fdf3"
+  integrity sha512-esWOBN6caKL4a/rMq52XVZpeitagIvZeTQP3lFMFD/BTaXtTKSvf4e6n5+4vB0xpYHTYfIOghvAXEFTuxd36Ig==
   dependencies:
-    consola "^2.15.0"
+    consola "^2.15.3"
   optionalDependencies:
-    firebase-admin "^9.4.2"
+    firebase-admin "^9.5.0"
 
 "@nuxtjs/pwa@^3.3.3":
   version "3.3.5"
@@ -4911,7 +4911,7 @@ find-up@^4.0.0, find-up@^4.1.0:
     locate-path "^5.0.0"
     path-exists "^4.0.0"
 
-firebase-admin@^9.4.2:
+firebase-admin@^9.4.2, firebase-admin@^9.5.0:
   version "9.5.0"
   resolved "https://registry.yarnpkg.com/firebase-admin/-/firebase-admin-9.5.0.tgz#438bc343f1fa0644c2bdbeb36eefec3eda3bf966"
   integrity sha512-OPXFOTDcAE+NORpfhq7YMEDk+vFClBtjfpkrjm2JHRxb8DpMm+K3AcusonFPU/WOH4FhiVN9JHB0+NPE20S3gQ==
