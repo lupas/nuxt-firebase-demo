@@ -1,7 +1,7 @@
 export default {
   isLoggedIn: (state) => {
     try {
-      return state.authUser.id !== null
+      return state.authUser.uid !== null
     } catch {
       return false
     }
