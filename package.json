@@ -3,16 +3,15 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "nuxt-ts",
-    "build": "nuxt-ts build",
-    "start": "nuxt-ts start",
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
     "generate": "nuxt-ts generate",
     "lint:js": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "lint": "npm run lint:js",
     "emulators": "firebase emulators:start"
   },
   "dependencies": {
-    "@nuxt/typescript-runtime": "^2.1.0",
     "@nuxtjs/firebase": "^7.5.0",
     "@nuxtjs/pwa": "^3.3.3",
     "core-js": "^3.14.0",
