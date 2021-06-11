@@ -52,7 +52,10 @@ const config: NuxtConfig = {
       functions: {
         emulatorPort: isDev && useEmulators ? 12345 : undefined,
       },
-      storage: true,
+      storage: {
+        emulatorPort: isDev && useEmulators ? 9199 : undefined,
+        emulatorHost: 'localhost',
+      },
       database: {
         emulatorPort: isDev && useEmulators ? 9000 : undefined,
       },

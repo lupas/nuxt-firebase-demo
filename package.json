@@ -12,7 +12,7 @@
     "emulators": "firebase emulators:start"
   },
   "dependencies": {
-    "@nuxtjs/firebase": "^7.5.0",
+    "@nuxtjs/firebase": "^7.6.1",
     "@nuxtjs/pwa": "^3.3.3",
     "core-js": "^3.14.0",
     "firebase": "8.6.5",
