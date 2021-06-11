@@ -15,13 +15,13 @@
 $ cd src
 
 # install dependencies
-$ yarn
+$ npm i
 
 # start firebase emulators
-$ yarn emulators
+$ npm run emulators
 
 # serve with hot reload at localhost:3000
-$ yarn dev
+$ npm run dev
 ```
 
 For detailed explanation on how things work, checkout [nuxt-community/firebase-module](https://github.com/nuxt-community/firebase-module).
