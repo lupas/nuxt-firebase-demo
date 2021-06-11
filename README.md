@@ -25,3 +25,7 @@ $ npm run dev
 ```
 
 For detailed explanation on how things work, checkout [nuxt-community/firebase-module](https://github.com/nuxt-community/firebase-module).
+
+## Issues
+
+If you have any issues with nuxt-firebase, please ask the question in [nuxt-community/firebase-module/issues](https://github.com/nuxt-community/firebase-module/issues).
