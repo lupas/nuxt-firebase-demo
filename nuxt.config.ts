@@ -25,13 +25,13 @@ const config: NuxtConfig = {
   firebase: {
     lazy: false,
     config: {
-      apiKey: 'AIzaSyDa-YwgWTp2GDyVYEfv-XLb62100_HoEvU',
-      authDomain: 'nuxt-fire-demo.firebaseapp.com',
-      projectId: 'nuxt-fire-demo',
-      storageBucket: 'nuxt-fire-demo.appspot.com',
-      messagingSenderId: '807370470428',
-      appId: '1:807370470428:web:26da98c86c3fd352',
-      measurementId: 'G-XT6PVC1D4X',
+      apiKey: 'AIzaSyAf0f_dcfpNiySi-RY4e2amWrkGAe389lg',
+      authDomain: 'karoo-bar.firebaseapp.com',
+      projectId: 'karoo-bar',
+      storageBucket: 'karoo-bar.appspot.com',
+      messagingSenderId: '40610940683',
+      appId: '1:40610940683:web:f7e6c78e917a029527840e',
+      measurementId: 'G-ZSE02GEWQ6'
     },
     onFirebaseHosting: false,
     terminateDatabasesAfterGenerate: true,
@@ -41,35 +41,27 @@ const config: NuxtConfig = {
           onAuthStateChangedAction: 'onAuthStateChanged',
         },
         ssr: true,
-        emulatorPort: isDev && useEmulators ? 9099 : undefined,
-        disableEmulatorWarnings: false,
+       // emulatorPort: isDev && useEmulators ? 9099 : undefined,
+        //disableEmulatorWarnings: false,
       },
       firestore: {
         memoryOnly: false,
         enablePersistence: true,
-        emulatorPort: isDev && useEmulators ? 8080 : undefined,
+        //emulatorPort: isDev && useEmulators ? 8080 : undefined,
       },
       functions: {
-        emulatorPort: isDev && useEmulators ? 12345 : undefined,
+        //emulatorPort: isDev && useEmulators ? 12345 : undefined,
       },
       storage: {
-        emulatorPort: isDev && useEmulators ? 9199 : undefined,
-        emulatorHost: 'localhost',
+        //emulatorPort: isDev && useEmulators ? 9199 : undefined,
+        //emulatorHost: 'localhost',
       },
       database: {
-        emulatorPort: isDev && useEmulators ? 9000 : undefined,
+        //emulatorPort: isDev && useEmulators ? 9000 : undefined,
       },
       performance: true,
       analytics: true,
-      remoteConfig: {
-        settings: {
-          fetchTimeoutMillis: 60000,
-          minimumFetchIntervalMillis: 43200000,
-        },
-        defaultConfig: {
-          welcome_message: 'Welcome',
-        },
-      },
+      
       messaging: {
         createServiceWorker: true,
         actions: [
@@ -83,7 +75,7 @@ const config: NuxtConfig = {
           },
         ],
         fcmPublicVapidKey:
-          'BL_xoiuOe5vbb2vJkCNnuswn03NwCsyCkJUgRbuQA5tpg7J4E4z50MO8b-wrrad6fcysYAaFjHqU7D9o0oCWL8w',
+          'BHyksIsYzvUYiyGqpAI5QbcVi_02t8ZfEWOtZJ2IeDRU28r9S9iU2EwDVHTVeAaDctBBRGNLzuRZLpcRyr6v6yE',
       },
     },
   },
