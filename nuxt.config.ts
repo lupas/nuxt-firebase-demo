@@ -1,4 +1,25 @@
+
 import { NuxtConfig } from '@nuxt/types'
+
+// tuki pac poklices dotenv
+require('dotenv').config()
+
+
+
+console.log(process.env)
+
+declare var process : {
+  env: {
+    NODE_ENV: string
+    FIRE_APIKEY: string,
+    FIRE_AUTHDOMAIN: string,
+    FIRE_PROJECTID: string,
+    FIRE_STORAGEBUCKET: string,
+    FIRE_MESSAGE: string,
+    FIRE_APPID: string,
+    FIRE_MEASURE: string,
+  }
+}
 
 const isDev = process.env.NODE_ENV === 'development'
 const useEmulators = false // manually change if emulators needed
@@ -14,6 +35,7 @@ const config: NuxtConfig = {
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
 
+
   components: true,
 
   buildModules: [
@@ -27,20 +49,20 @@ const config: NuxtConfig = {
     //customVariables: ['~/assets/variables.scss'],
     theme: {
       light:true,
-      
+
       dark: false,  //you don't actually need this line as it's for default
       themes: {
           light: {
             primary: '#26bcdb',
             secondary: '#1f90a6',
             info: '#1f90a6',
-              
+
           },
           dark: {
             primary: '#26bcdb',
             secondary: '#1f90a6',
             info: '#1f90a6',
-          
+
           },
       }
     }
@@ -49,6 +71,14 @@ const config: NuxtConfig = {
   firebase: {
     lazy: false,
     config: {
+      //! tk naj bi zgledal, v main directoryu je .env file k ma te spremenljivke
+      // apiKey: process.env.FIRE_APIKEY,
+      // authDomain: process.env.FIRE_AUTHDOMAIN,
+      // projectId: process.env.FIRE_PROJECTID,
+      // storageBucket: process.env.FIRE_STORAGEBUCKET,
+      // messagingSenderId: process.env.FIRE_MESSAGE,
+      // appId: process.env.FIRE_APPID,
+      // measurementId: process.env.FIRE_MEASURE,
       apiKey: 'AIzaSyAf0f_dcfpNiySi-RY4e2amWrkGAe389lg',
       authDomain: 'karoo-bar.firebaseapp.com',
       projectId: 'karoo-bar',
@@ -104,7 +134,7 @@ const config: NuxtConfig = {
     },
   },
 
-  
+
 
   modules: ['@nuxtjs/pwa'],
   // plugins: ['~/plugins/lazyMode'],
