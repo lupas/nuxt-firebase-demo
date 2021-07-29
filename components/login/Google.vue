@@ -1,13 +1,33 @@
 <template>
-  <div>
-    <button v-if="!isLoggedIn" class="bg-blue-800 p-5 rounded shadow" @click="googleSignIn">
-      Sign In with Google
-    </button>
-    <div v-else>
-      <p>You are logged in with {{ authUser.email }}.</p>
-      <Btn color="primary" outlined @click="googleLogout">Logout</Btn>
-    </div>
-  </div>
+ <v-card dark >
+    <v-card-title class="mb-5" style="word-break:break-word">Login</v-card-title>
+        <v-card-text>
+          
+            <v-btn 
+                v-if="!isLoggedIn"
+                        color="primary"
+                        class="my-5"
+                        block
+                        @click="googleSignIn"
+                    >
+                    Sign In with Google
+              </v-btn>
+          
+            <div v-else>
+              <v-btn 
+                        color="primary"
+                        class="my-5"
+                        block
+                        @click="googleLogout"
+                    >
+                    Logout
+              </v-btn>
+              <p>You are logged in with {{ authUser.email }}.</p>
+            </div>   
+        </v-card-text>
+
+      </v-card>
+  
 
 </template>
 

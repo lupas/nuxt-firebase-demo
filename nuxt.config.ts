@@ -23,6 +23,29 @@ const config: NuxtConfig = {
     '@nuxtjs/vuetify',
   ],
 
+  vuetify: {
+    //customVariables: ['~/assets/variables.scss'],
+    theme: {
+      light:true,
+      
+      dark: false,  //you don't actually need this line as it's for default
+      themes: {
+          light: {
+            primary: '#26bcdb',
+            secondary: '#1f90a6',
+            info: '#1f90a6',
+              
+          },
+          dark: {
+            primary: '#26bcdb',
+            secondary: '#1f90a6',
+            info: '#1f90a6',
+          
+          },
+      }
+    }
+  },
+
   firebase: {
     lazy: false,
     config: {
@@ -80,6 +103,8 @@ const config: NuxtConfig = {
       },
     },
   },
+
+  
 
   modules: ['@nuxtjs/pwa'],
   // plugins: ['~/plugins/lazyMode'],
