@@ -71,7 +71,6 @@ const config: NuxtConfig = {
   firebase: {
     lazy: false,
     config: {
-      //! tk naj bi zgledal, v main directoryu je .env file k ma te spremenljivke
       apiKey: process.env.FIRE_APIKEY,
       authDomain: process.env.FIRE_AUTHDOMAIN,
       projectId: process.env.FIRE_PROJECTID,
