@@ -20,6 +20,7 @@ const config: NuxtConfig = {
     '@nuxt/typescript-build',
     '@nuxtjs/tailwindcss',
     '@nuxtjs/firebase',
+    '@nuxtjs/vuetify',
   ],
 
   firebase: {
@@ -31,7 +32,7 @@ const config: NuxtConfig = {
       storageBucket: 'karoo-bar.appspot.com',
       messagingSenderId: '40610940683',
       appId: '1:40610940683:web:f7e6c78e917a029527840e',
-      measurementId: 'G-ZSE02GEWQ6'
+      measurementId: 'G-ZSE02GEWQ6',
     },
     onFirebaseHosting: false,
     terminateDatabasesAfterGenerate: true,
@@ -41,7 +42,7 @@ const config: NuxtConfig = {
           onAuthStateChangedAction: 'onAuthStateChanged',
         },
         ssr: true,
-       // emulatorPort: isDev && useEmulators ? 9099 : undefined,
+        // emulatorPort: isDev && useEmulators ? 9099 : undefined,
         //disableEmulatorWarnings: false,
       },
       firestore: {
@@ -61,7 +62,7 @@ const config: NuxtConfig = {
       },
       performance: true,
       analytics: true,
-      
+
       messaging: {
         createServiceWorker: true,
         actions: [
