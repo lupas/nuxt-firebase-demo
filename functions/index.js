@@ -8,7 +8,7 @@ exports.testFunction = functions.https.onCall(() => {
   return { message: "Yeaaahh it's working!" }
 })
 
-exports.sendTestPushMessage = functions.https.onCall(async (data) => {
+exports.sendTestPushMessage = functions.region('europe-west1').https.onCall(async (data) => {
   // As defined in https://firebase.google.com/docs/reference/fcm/rest/v1/projects.messages
   const image =
     'https://avatars2.githubusercontent.com/u/4020037?s=460&u=c5f9c131d565202d8e530295b130239edd25768d&v=4'
