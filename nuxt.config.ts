@@ -37,7 +37,6 @@ const config: NuxtConfig = {
     terminateDatabasesAfterGenerate: true,
     services: {
       auth: {
-        static: true,
         initialize: {
           onAuthStateChangedAction: 'onAuthStateChanged',
         },
@@ -46,32 +45,23 @@ const config: NuxtConfig = {
         disableEmulatorWarnings: false,
       },
       firestore: {
-        static: true,
         memoryOnly: false,
         enablePersistence: true,
         emulatorPort: isDev && useEmulators ? 8080 : undefined,
       },
       functions: {
-        static: true,
         emulatorPort: isDev && useEmulators ? 12345 : undefined,
       },
       storage: {
-        static: true,
         emulatorPort: isDev && useEmulators ? 9199 : undefined,
         emulatorHost: 'localhost',
       },
       database: {
-        static: true,
         emulatorPort: isDev && useEmulators ? 9000 : undefined,
       },
-      performance: {
-        static: true,
-      },
-      analytics: {
-        static: true,
-      },
+      performance: true,
+      analytics: true,
       remoteConfig: {
-        static: true,
         settings: {
           fetchTimeoutMillis: 60000,
           minimumFetchIntervalMillis: 43200000,
