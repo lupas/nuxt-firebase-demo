@@ -76,24 +76,15 @@ export default Vue.extend({
     },
     startListeners() {
       this.startOnMessageListener()
-      this.startTokenRefreshListener()
+
       this.listenersStarted = true
     },
     startOnMessageListener() {
-      this.$fire.messaging.onMessage((payload) => {
+      this.$fire.messaging.onMessage((payload: any) => {
         console.info('Message received. ', payload)
       })
     },
-    startTokenRefreshListener() {
-      this.$fire.messaging.onTokenRefresh(async () => {
-        try {
-          const refreshedToken = await this.$fire.messaging.getToken()
-          this.idToken = refreshedToken
-        } catch (e) {
-          console.error('Unable to retrieve refreshed token ', e)
-        }
-      })
-    },
+
     sendTestMessage() {
       try {
         setTimeout(() => {
