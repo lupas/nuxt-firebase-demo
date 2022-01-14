@@ -1,8 +1,0 @@
-[
-  {
-    "name": "index",
-    "path": "/",
-    "component": "/Users/pascal/Code/nuxt-firebase-demo/pages/index.vue",
-    "chunkName": "pages/index"
-  }
-]
